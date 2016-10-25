@@ -39,7 +39,7 @@
       </ul>
     </div>
   </nav> -->
-  <section class="testheight" layout="row" flex>
+  <section layout="row" flex>
 
    <md-sidenav
        class="md-sidenav-left "
@@ -47,22 +47,67 @@
        md-is-locked-open="true"
        md-whiteframe="4">
 
+
      <md-toolbar class="md-theme-indigo">
-       <h1 class="md-toolbar-tools">Sidenav Left</h1>
+       <h1 class="md-toolbar-tools">Awsome Menu</h1>
      </md-toolbar>
-     <md-content layout-padding >
 
-     </md-content>
+     <md-toolbar class="md-menu-toolbar">
+ <md-list-item>
+   <p>Reports</p>
 
-   </md-sidenav>
+   <md-menu class="md-secondary" >
+     <md-button class="md-icon-button">
+       <md-icon md-svg-icon="communication:message"></md-icon>
+     </md-button>
+     <md-menu-content width="4">
+       <md-menu-item>
+         <md-button>
+           Skills
+         </md-button>
+       </md-menu-item>
+       <md-menu-item>
+         <md-button>
+           Client
+         </md-button>
+       </md-menu-item>
+       <md-menu-divider></md-menu-divider>
+       <md-menu-item>
+         <md-button>
+           Recruiter
+         </md-button>
+       </md-menu-item>
+     </md-menu-content>
+   </md-menu>
 
-   <md-content flex layout-padding>
+ </md-list-item>
+ <md-list-item>
+   <p>Employees</p>
 
-     <ui-view></ui-view>
+   <md-menu class="md-secondary">
+     <md-button class="md-icon-button">
+       <md-icon md-svg-icon="communication:message"></md-icon>
+     </md-button>
+   </md-menu>
 
-   </md-content>
+ </md-list-item>
+ <md-list-item>
+   <p>Recruiters</p>
 
+   <md-menu class="md-secondary">
+     <md-button class="md-icon-button">
+       <md-icon md-svg-icon="communication:message"></md-icon>
+     </md-button>
+   </md-menu>
 
+ </md-list-item>
+ <md-list-item>
+   <p>Request Quarter</p>
 
- </section>
- 
+   <md-menu class="md-secondary">
+     <md-button class="md-icon-button">
+       <md-icon md-svg-icon="communication:message"></md-icon>
+     </md-button>
+   </md-menu>
+
+ </md-list-item>

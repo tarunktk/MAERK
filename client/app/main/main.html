@@ -1,14 +1,22 @@
-
-<header class="hero-unit" id="banner">
+<!--
+<nav class="hero-unit", "navBar">
   <div class="container">
-    <h1>'hellsclksco!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+    <div class="container">
+      <div class="column">
+        <div class="col-lg-12">
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">login</a>
+        </div>
+      </div>
+    </div> -->
+    <!-- <h1>'hellsclksco!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p> -->
+    <!-- <img src="logo.png">
   </div>
-</header>
+</nav> -->
 
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header">Features:</h1>
@@ -17,4 +25,72 @@
       </ul>
     </div>
   </div>
-</div>
+</div> -->
+
+
+
+ <!-- <nav>
+    <div class="nav-wrapper">
+    <img src="logo.png">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="login.html">login</a></li>
+
+      </ul>
+    </div>
+  </nav> -->
+  <section layout="row" flex>
+
+   <md-sidenav
+       class="md-sidenav-left "
+       md-component-id="left"
+       md-is-locked-open="true"
+       md-whiteframe="4">
+
+
+     <md-toolbar class="md-theme-indigo">
+       <h1 class="md-toolbar-tools">Awsome Menu</h1>
+     </md-toolbar>
+
+     <md-toolbar class="md-menu-toolbar">
+ <md-list-item>
+   <p>Reports</p>
+
+   <md-menu class="md-secondary" >
+     <md-button class="md-icon-button">
+       <md-icon md-svg-icon="communication:message"></md-icon>
+     </md-button>
+     <md-menu-content width="4">
+       <md-menu-item>
+         <md-button>
+           Skills
+         </md-button>
+       </md-menu-item>
+       <md-menu-item>
+         <md-button>
+           Client
+         </md-button>
+       </md-menu-item>
+       <md-menu-divider></md-menu-divider>
+       <md-menu-item>
+         <md-button>
+           Recruiter
+         </md-button>
+         <span></span>
+       </md-menu-item>
+     </md-menu-content>
+   </md-menu>
+
+ </md-list-item>
+ <md-list-item ng-click="null">
+   <p>Employees</p>
+
+
+ </md-list-item>
+ <md-list-item ng-click="null">
+   <p>Recruiters</p>
+ </md-list-item>
+ <md-list-item ng-click="null">
+   <p>Request Quarter</p>
+
+ </md-list-item>

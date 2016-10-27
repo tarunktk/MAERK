@@ -44,15 +44,13 @@
    <md-sidenav
        class="md-sidenav-left "
        md-component-id="left"
-       md-is-locked-open="true"
+       md-is-locked-open="$mdMedia('gt-md')"
        md-whiteframe="4">
-
 
      <md-toolbar class="md-theme-indigo">
        <h1 class="md-toolbar-tools">Awsome Menu</h1>
      </md-toolbar>
-
-     <md-toolbar class="md-menu-toolbar">
+<md-content>
  <md-list-item>
    <p>Reports</p>
 
@@ -82,10 +80,9 @@
    </md-menu>
 
  </md-list-item>
- <md-list-item ng-click="null">
-   <p>Employees</p>
+ <md-list-item ui-sref=".employees">
 
-
+     Employees
  </md-list-item>
  <md-list-item ng-click="null">
    <p>Recruiters</p>
@@ -94,3 +91,7 @@
    <p>Request Quarter</p>
 
  </md-list-item>
+ </md-content>
+ </md-sidenav>
+  <div flex ui-view></div>
+</section>

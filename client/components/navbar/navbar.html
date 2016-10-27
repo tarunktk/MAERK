@@ -1,6 +1,6 @@
 
 
-    <md-content>
+    <!-- <md-content> -->
 
 
       <!-- <md-toolbar class="md-hue-2">
@@ -22,8 +22,13 @@
       </md-toolbar> -->
 
 
-      <md-toolbar>
-        <div class="md-toolbar-tools">
+      <!-- <md-toolbar class="md-toolbar-tools">
+
+          <div ng-cloak layout="row" md-is-locked-open="gt-md">
+  <md-button  class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md>
+    <md-tooltip>Side Panel</md-tooltip>
+   <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+ </md-button>
           <img src = "logo.png">
           <span flex></span>
           <md-button class="md-raised" aria-label="Logout">
@@ -31,11 +36,12 @@
           </md-button>
           <md-button class="md-fab md-mini" aria-label="Favorite">
             <!-- <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon> -->
-            <md-icon md-font-icon="classname" />
+            <!-- <md-icon md-font-icon="classname" />
             <i class="material-icons">adb</i>
           </md-button>
-        </div>
-      </md-toolbar>
+        </div> -->
+
+      <!-- </md-toolbar> -->
 
       <!-- <br> -->
 
@@ -53,6 +59,26 @@
           <span class="md-flex">Toolbar: tall with actions pin to the bottom (md-warn md-hue-3)</span>
         </h2>
       </md-toolbar> -->
-    </md-content>
+    <!-- </md-content>
   </div>
- </div>
+ </div> -->
+ <md-toolbar class="md-padding">
+     <!-- <div class="md-toolbar-tools" md-is-locked-open="gt-md"> -->
+       <div ng-cloak layout="row" md-is-locked-open="gt-md">
+  <md-button  class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md>
+    <md-tooltip>Side Panel</md-tooltip>
+   <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+ </md-button>
+       <img src="logo.png">
+       <span flex></span>
+       <md-button class="md-raised" aria-label="Learn More">
+         Logout
+       </md-button>
+       <md-button class="md-fab md-mini" aria-label="Favorite">
+         <!-- <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon> -->
+         <md-icon md-font-icon="classname" />
+         <i class="material-icons">adb</i>
+       </md-button>
+     </div>
+
+   </md-toolbar>

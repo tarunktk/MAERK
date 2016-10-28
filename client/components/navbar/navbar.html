@@ -65,19 +65,19 @@
  <md-toolbar class="md-padding">
      <!-- <div class="md-toolbar-tools" md-is-locked-open="gt-md"> -->
        <div ng-cloak layout="row" md-is-locked-open="gt-md">
-  <md-button  class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md>
-    <md-tooltip>Side Panel</md-tooltip>
-   <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
- </md-button>
-       <img src="logo.png">
-       <span flex></span>
-       <md-button class="md-raised" aria-label="Learn More">
-         Logout
-       </md-button>
-       <md-button class="md-fab md-mini" aria-label="Favorite">
-         <!-- <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon> -->
-         <md-icon md-font-icon="classname" />
-         <i class="material-icons">adb</i>
+        <md-button  ng-show="isLoggedIn()" class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md>
+          <md-tooltip>Side Panel</md-tooltip>
+          <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+        </md-button>
+        <img src="logo.png">
+        <span flex></span>
+        <md-button class="md-raised">
+          Logout
+        </md-button>
+        <md-button layout=" center center">
+          <!-- <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon> -->
+         <!-- <i class="material-icons">settings</i> -->
+         <i class="material-icons">&#xE8B8;</i>
        </md-button>
      </div>
 

@@ -3,27 +3,10 @@
 
    angular.module('maerkApp')
      .controller('EmployeesController', function($scope, $mdToast){
-      //  $scope.deleteRowCallback = function(rows){
-      //       $mdToast.show(
-      //           $mdToast.simple()
-      //               .content('Deleted row id(s): '+rows)
-      //               .hideDelay(3000)
-      //       );
-      //   };
-      //   $scope.saveRowCallback = function(row){
-      //       $mdToast.show(
-      //           $mdToast.simple()
-      //               .content('Row changed to: '+row)
-      //               .hideDelay(3000)
-      //       );
-      //   };
-      //   $scope.selectedRowCallback = function(rows){
-      //       $mdToast.show(
-      //           $mdToast.simple()
-      //               .content('Selected row id(s): '+rows)
-      //               .hideDelay(3000)
-      //       );
-      //   };
+
+               $scope.userState = '';
+               $scope.states = ('add edit delete').split(' ').map(function (state) { return { abbrev: state }; });
+
 
        $scope.employeeList = [
            {

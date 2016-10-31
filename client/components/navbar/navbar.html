@@ -65,20 +65,23 @@
  <md-toolbar class="md-padding">
      <!-- <div class="md-toolbar-tools" md-is-locked-open="gt-md"> -->
        <div ng-cloak layout="row" md-is-locked-open="gt-md">
-        <md-button  ng-show="isLoggedIn()" class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md>
+        <md-button  ng-show="nav.isLoggedIn()" class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md>
           <md-tooltip>Side Panel</md-tooltip>
           <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
         </md-button>
         <img src="logo.png">
         <span flex></span>
-        <md-button class="md-raised">
-          Logout
+        <md-button class="md-raised"  ng-show="nav.isLoggedIn()" ui-sref-active="active" ui-sref="login">
+          Logout <md-tooltip>Get the F**k outta here</md-tooltip>
         </md-button>
-        <md-button layout=" center center">
-          <!-- <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon> -->
-         <!-- <i class="material-icons">settings</i> -->
-         <i class="material-icons">&#xE8B8;</i>
-       </md-button>
+          <md-button class="md-icon-button" aria-label="Custom Icon Button" layout="center center" layout="column" ui-sref-active="active" ui-sref="settings">
+            <md-tooltip>Change Password </md-tooltip>
+            <i class="material-icons">settings</i>
+      <!-- <md-icon md-svg-src="your/icon.svg"></md-icon> -->
+
+    </md-button>
+
+
      </div>
 
    </md-toolbar>

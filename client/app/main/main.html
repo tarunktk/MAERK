@@ -8,10 +8,10 @@
             <a href="login.html">login</a>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- <h1>'hellsclksco!</h1>
     <p class="lead">Kick-start your next web app with Angular Fullstack</p> -->
-    <!-- <img src="logo.png">
+<!-- <img src="logo.png">
   </div>
 </nav> -->
 
@@ -29,7 +29,7 @@
 
 
 
- <!-- <nav>
+<!-- <nav>
     <div class="nav-wrapper">
     <img src="logo.png">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -39,59 +39,55 @@
       </ul>
     </div>
   </nav> -->
-  <section layout="row" flex>
 
-   <md-sidenav
-       class="md-sidenav-left "
-       md-component-id="left"
-       md-is-locked-open="$mdMedia('gt-md')"
-       md-whiteframe="4">
+<section layout="row" flex>
 
-     <md-toolbar class="md-theme-indigo">
-       <h1 class="md-toolbar-tools">Awsome Menu</h1>
-     </md-toolbar>
-<md-content>
- <md-list-item>
-   <p>Reports</p>
+  <md-sidenav class="md-sidenav-left " md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
 
-   <md-menu class="md-secondary" >
-     <md-button class="md-icon-button">
-       <md-icon md-svg-icon="communication:message"></md-icon>
-     </md-button>
-     <md-menu-content width="4">
-       <md-menu-item>
-         <md-button>
-           Skills
-         </md-button>
-       </md-menu-item>
-       <md-menu-item>
-         <md-button>
-           Client
-         </md-button>
-       </md-menu-item>
-       <md-menu-divider></md-menu-divider>
-       <md-menu-item>
-         <md-button>
-           Recruiter
-         </md-button>
-         <span></span>
-       </md-menu-item>
-     </md-menu-content>
-   </md-menu>
+    <md-toolbar class="md-theme-indigo">
+      <h1 class="md-toolbar-tools">Awesome Menu</h1>
+    </md-toolbar>
+    <md-content>
+      <md-list-item>
+        <p>Reports</p>
 
- </md-list-item>
- <md-list-item ui-sref=".employees">
+        <md-menu class="md-secondary">
+          <md-button class="md-icon-button">
+            <!-- <md-icon md-svg-icon="communication:message"></md-icon> -->
+          </md-button>
+          <md-menu-content width="4">
+            <md-menu-item>
+              <md-button>
+                Skills
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button>
+                Client
+              </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+              <md-button>
+                Recruiter
+              </md-button>
+              <span></span>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
 
-     Employees
- </md-list-item>
- <md-list-item ng-click="null">
-   <p>Recruiters</p>
- </md-list-item>
- <md-list-item ng-click="null">
-   <p>Request Quarter</p>
+      </md-list-item>
+      <md-list-item ui-sref=".employees">
 
- </md-list-item>
- </md-content>
- </md-sidenav>
+        Employees
+      </md-list-item>
+      <md-list-item ng-click="null">
+        <p>Recruiters</p>
+      </md-list-item>
+      <md-list-item ng-click="null">
+        <p>Request Quarter</p>
+      </md-list-item>
+    </md-content>
+  </md-sidenav>
   <div flex ui-view></div>
 </section>

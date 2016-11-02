@@ -6,6 +6,9 @@
 
                $scope.userState = '';
                $scope.states = ('add edit delete').split(' ').map(function (state) { return { abbrev: state }; });
+               'use strict';
+
+
 
 
        $scope.employeeList = [

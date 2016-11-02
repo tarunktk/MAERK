@@ -63,7 +63,7 @@
   </div>
  </div> -->
  <md-toolbar class="md-padding">
-     
+
        <div ng-cloak layout="row" md-is-locked-open="gt-md">
         <md-button  ng-show="nav.isLoggedIn()" class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md>
           <md-tooltip>Side Panel</md-tooltip>
@@ -71,10 +71,11 @@
         </md-button>
         <img src="logo.png">
         <span flex></span>
-        <md-button class="md-raised" ng-show="nav.isLoggedIn()" ui-sref-active="active" ui-sref="login">
+
+        <md-button class="md-raised" ng-show="nav.isLoggedIn()"   ui-sref="logout">
           Logout <md-tooltip>Get the F**k outta here</md-tooltip>
         </md-button>
-          <md-button class="md-icon-button" aria-label="Custom Icon Button" layout="center center" layout="column" ui-sref-active="active" ui-sref="settings">
+          <md-button class="md-icon-button" ng-show="nav.isLoggedIn()" aria-label="Custom Icon Button" layout="center center" layout="column" ui-sref-active="active" ui-sref="settings">
             <md-tooltip>Change Password </md-tooltip>
             <i class="material-icons">settings</i>
 

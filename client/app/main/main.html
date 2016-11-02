@@ -49,11 +49,12 @@
     </md-toolbar>
     <md-content>
       <md-list-item>
-        <p>Reports</p>
-
+        Reports
+        <div flex></div>
+        <i class="material-icons">explore</i>
         <md-menu class="md-secondary">
-          <md-button class="md-icon-button">
-            <!-- <md-icon md-svg-icon="communication:message"></md-icon> -->
+          <md-button >
+
           </md-button>
           <md-menu-content width="4">
             <md-menu-item>
@@ -66,26 +67,32 @@
                 Client
               </md-button>
             </md-menu-item>
-            <md-menu-divider></md-menu-divider>
             <md-menu-item>
               <md-button>
                 Recruiter
               </md-button>
-              <span></span>
             </md-menu-item>
           </md-menu-content>
         </md-menu>
-
       </md-list-item>
       <md-list-item ui-sref=".employees">
 
         Employees
+
+        <div flex></div>
+        <i class="material-icons">account_circle</i>
       </md-list-item>
       <md-list-item ng-click="null">
-        <p>Recruiters</p>
+        Recruiters
+        <div flex></div>
+        <i class="material-icons">perm_identity</i>
+
       </md-list-item>
       <md-list-item ng-click="null">
-        <p>Request Quarter</p>
+        Request Quarter
+        <div flex></div>
+        <i class="material-icons">art_track</i>
+
       </md-list-item>
     </md-content>
   </md-sidenav>

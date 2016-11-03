@@ -13,20 +13,20 @@
  function skillsController ($scope, $log) {
    this.year = '';
    this.years = ['2016','2015','2014'];
-   var tabs = [
-         { title: 'January'},
-         { title: 'February'},
-         { title: 'March'},
-         { title: 'April'},
-         { title: 'May'},
-         { title: 'June'},
-         { title: 'July'},   
-         { title: 'August'},
-         { title: 'September'},
-         { title: 'October'},
-         { title: 'November'},
-         { title: 'December'}
-       ];
+  //  var tabs = [
+  //        { title: 'January'},
+  //        { title: 'February'},
+  //        { title: 'March'},
+  //        { title: 'April'},
+  //        { title: 'May'},
+  //        { title: 'June'},
+  //        { title: 'July'},
+  //        { title: 'August'},
+  //        { title: 'September'},
+  //        { title: 'October'},
+  //        { title: 'November'},
+  //        { title: 'December'}
+  //      ];
   //      selected = null,
   //      previous = null;
   //  $scope.tabs = tabs;

@@ -9,38 +9,54 @@
            <div ng-hide="true">
                {{(filteredItems = (employeeList | filter: filterID))}}
            </div>
+         </md-card>
           <md-toolbar>
     <div class="md-toolbar-tools">
 
         <h2>
           <span>Employees</span>
-        </h2>
+      </h2>
+
+
         <span flex></span>
 
-        <md-button  class="md-icon-button"  ng-click="vm.deleteSelectedRows()" aria-label="Delete">
+        <md-button  class="md-icon-button"  ng-click="vm.editSelectedRows()" aria-label="Edit">
+          <md-tooltip>Edit</md-tooltip>
+        <i class="material-icons" md-ink-ripple="#1df416">mode_edit</i>
+        </md-button>
+
+
+        <md-button  class="md-icon-button"  alternate-headers="'contextual'"ng-click="vm.deleteSelectedRows()" aria-label="Delete">
           <md-tooltip>Delete</md-tooltip>
-        <i class="material-icons">delete</i>
+        <i class="material-icons" md-ink-ripple="#1df416">delete</i>
         </md-button>
 
-        <md-button class="md-icon-button" aria-label="Settings">
 
-          <md-tooltip>Settings</md-tooltip>
-        <i class="material-icons">&#xE8B8;</i>
-        </md-button>
+<md-button>
+        <md-switch ng-model="data.cb2" aria-label="Switch 2"  ng-hide="" ng-true-value="'Activate'" ng-false-value="'Deactivate'" class="md-warn">
+            {{ data.cb2 }}
+        </md-switch>
+</md-button>
+
 
 
    </div>
 </md-toolbar>
        </md-card>
- <mdt-table paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}"
-            table-card="{visible: true, title: 'Employees', columnSelector: true}"
-            selectable-rows="true"
+       <md-button class=" md-primary">
+         Add  an Employee <md-tooltip>Another one??? Really????</md-tooltip>
+       </md-button>
+       <mdt-table table-card="{visible: true, columnSelector: true}"
+                  selectable-rows="true"
 
-            delete-row-callback="deleteRowCallback(rows)"
-            save-row-callback="saveRowCallback(row)"
-            animate-sort-icon="true"
+                  save-row-callback="saveRowCallback(rows)"
+                  delete-row-callback="deleteRowCallback(rows)"
+                  alternate-headers="'contextual'"
+                  paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}"
+                  selected-row-callback="selectedRowCallback(rows)"
+                  animate-sort-icon="true"
 
-                mdt-row="{
+                 mdt-row="{
                      'data': filteredItems,
                      'table-row-id-key': 'id',
                      'column-keys': ['employee_id', 'firstName', 'lastName', 'client', 'skills', 'recruiter',  'revenue']
@@ -57,7 +73,7 @@
      <mdt-column align-rule="left" column-sort="true">Recruiter</mdt-column>
      <mdt-column align-rule="left"column-sort="true">Revenue</mdt-column>
    </mdt-header-row>
-   <mdt-row ng-repeat="employee in employeeList">
+   <!-- <mdt-row ng-repeat="employee in employeeList">
      <mdt-cell
                editable-field="smallEditDialog"
                editable-field-max-length="25">{{employee.employee_id}</mdt-cell>
@@ -67,6 +83,6 @@
      <mdt-cell>{{employee.skills}}</mdt-cell>
      <mdt-cell>{{employee.recruiter}}</mdt-cell>
      <mdt-cell>{{employee.revenue}}</mdt-cell>
-   </mdt-row>
+   </mdt-row> -->
  </mdt-table>
 </div>

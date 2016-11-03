@@ -48,7 +48,7 @@
       <h1 class="md-toolbar-tools">Awesome Menu</h1>
     </md-toolbar>
     <md-content>
-      <md-list-item>
+      <!-- <md-list-item>
         Reports
         <div flex></div>
         <i class="material-icons">explore</i>
@@ -57,11 +57,14 @@
 
           </md-button>
           <md-menu-content width="4">
-            <md-menu-item>
-              <md-button>
-                Skills
-              </md-button>
-            </md-menu-item>
+
+
+<md-list-item ui-sref=".skills">
+
+  Skills
+  </md-list-item>
+
+
             <md-menu-item>
               <md-button>
                 Client
@@ -75,6 +78,37 @@
           </md-menu-content>
         </md-menu>
       </md-list-item>
+      <md-divider></md-divider> -->
+      <md-list-item>
+    <p>Reports</p>
+    <div flex></div>
+    <md-menu class="md-secondary">
+    <i class="material-icons">explore</i>
+      <md-menu-content width="4">
+        <md-menu-item>
+          <md-button ui-sref=".skills">
+            Skills
+          </md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+          <md-button>
+          Client
+          </md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+          <md-button>
+            Recruiter
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+
+  </md-list-item>
+
+  <md-divider></md-divider>
+
       <md-list-item ui-sref=".employees">
 
         Employees
@@ -82,19 +116,22 @@
         <div flex></div>
         <i class="material-icons">account_circle</i>
       </md-list-item>
+      <md-divider></md-divider>
       <md-list-item ng-click="null">
         Recruiters
         <div flex></div>
         <i class="material-icons">perm_identity</i>
 
       </md-list-item>
+      <md-divider></md-divider>
       <md-list-item ng-click="null">
         Request Quarter
         <div flex></div>
         <i class="material-icons">art_track</i>
 
       </md-list-item>
+      <md-divider></md-divider>
     </md-content>
   </md-sidenav>
-  <div flex ui-view></div>
+  <div flex ui-view layout="column"></div>
 </section>

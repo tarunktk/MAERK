@@ -1,38 +1,33 @@
-<div  layout-margin>
+<md-content  layout-margin>
 
- <md-card style="margin:0px">
-           <md-input-container style="margin:15px;">
-               <label>Filter by search</label>
-               <input type="text" ng-model="filterID">
-           </md-input-container>
 
-           <div ng-hide="true">
-               {{(filteredItems = (employeeList | filter: filterID))}}
-           </div>
-         </md-card>
           <md-toolbar>
     <div class="md-toolbar-tools">
 
-        <h2>
-          <span>Employees</span>
-      </h2>
+      <md-input-container md-no-float class="md-accent" flex="50" style="padding-bottom:0px;margin-left:25px">
+   <md-icon style="color:wheat" class="material-icons">&#xE8B6;</md-icon>
+   <input ng-model="filterID" placeholder="Search" style="color:wheat;padding-left:25px;margin-left:5px">
+   <div ng-hide="true">
+       {{(filteredItems = (employeeList | filter: filterID))}}
+   </div>
+</md-input-container>
 
 
         <span flex></span>
 
-        <md-button  class="md-icon-button"  ng-click="vm.editSelectedRows()" aria-label="Edit">
+        <md-button  class="md-icon-button" ng-show="showEditButton"  ng-click="showEdit($event)" aria-label="Edit">
           <md-tooltip>Edit</md-tooltip>
         <i class="material-icons" md-ink-ripple="#1df416">mode_edit</i>
         </md-button>
 
-
-        <md-button  class="md-icon-button"  alternate-headers="'contextual'"ng-click="vm.deleteSelectedRows()" aria-label="Delete">
+        <md-button  class="md-icon-button" ng-show="showDeleteButton"  ng-click="showConfirm($event)" aria-label="Delete">
           <md-tooltip>Delete</md-tooltip>
         <i class="material-icons" md-ink-ripple="#1df416">delete</i>
         </md-button>
 
 
-<md-button>
+<md-button ng-show="showActivateButton" ng-click="showActivate($event)">
+    <md-tooltip>Activate/Deactivate</md-tooltip>
         <md-switch ng-model="data.cb2" aria-label="Switch 2"  ng-hide="" ng-true-value="'Activate'" ng-false-value="'Deactivate'" class="md-warn">
             {{ data.cb2 }}
         </md-switch>
@@ -43,26 +38,28 @@
    </div>
 </md-toolbar>
        </md-card>
-       <md-button class=" md-primary">
+       <md-button class=" md-primary" ng-click="showAdvanced($event)">
          Add  an Employee <md-tooltip>Another one??? Really????</md-tooltip>
        </md-button>
        <mdt-table table-card="{visible: true, columnSelector: true}"
                   selectable-rows="true"
-
-                  save-row-callback="saveRowCallback(rows)"
-                  delete-row-callback="deleteRowCallback(rows)"
-                  alternate-headers="'contextual'"
+                  save-row-callback="saveRowCallback(row)"
                   paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}"
                   selected-row-callback="selectedRowCallback(rows)"
-                  animate-sort-icon="true"
-
-                 mdt-row="{
-                     'data': filteredItems,
-                     'table-row-id-key': 'id',
-                     'column-keys': ['employee_id', 'firstName', 'lastName', 'client', 'skills', 'recruiter',  'revenue']
-                   }">
+                >
 
 
+
+
+                   <mdt-row ng-repeat="employee in employeeList">
+                     <mdt-cell>{{employee.employeeId}}</mdt-cell>
+                     <mdt-cell>{{employee.firstName}}</mdt-cell>
+                     <mdt-cell>{{employee.lastName}}</mdt-cell>
+                     <mdt-cell>{{employee.client}}</mdt-cell>
+                     <mdt-cell>{{employee.skills}}</mdt-cell>
+                     <mdt-cell>{{employee.recruiter}}</mdt-cell>
+                     <mdt-cell>{{employee.revenue | currency }}</mdt-cell>
+                   </mdt-row>
 
    <mdt-header-row >
      <mdt-column align-rule="left" column-sort="true" exclude-from-column-selector="true">ID</mdt-column>
@@ -73,16 +70,6 @@
      <mdt-column align-rule="left" column-sort="true">Recruiter</mdt-column>
      <mdt-column align-rule="left"column-sort="true">Revenue</mdt-column>
    </mdt-header-row>
-   <!-- <mdt-row ng-repeat="employee in employeeList">
-     <mdt-cell
-               editable-field="smallEditDialog"
-               editable-field-max-length="25">{{employee.employee_id}</mdt-cell>
-     <mdt-cell>{{employee.firstName}}</mdt-cell>
-     <mdt-cell>{{employee.lastName}}</mdt-cell>
-     <mdt-cell>{{employee.client}}</mdt-cell>
-     <mdt-cell>{{employee.skills}}</mdt-cell>
-     <mdt-cell>{{employee.recruiter}}</mdt-cell>
-     <mdt-cell>{{employee.revenue}}</mdt-cell>
-   </mdt-row> -->
+
  </mdt-table>
-</div>
+</md-content>

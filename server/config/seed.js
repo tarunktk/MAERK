@@ -395,6 +395,7 @@ User.find({}).remove()
              "relocation": 3646,
              "immigration": 8663,
              "pay_vacation_cost": 7846,
+             "ksquare_hourly_cost": 50,
              "target_bill_rate": 108254,
              "client_bill_pay": 104163,
              "activate": true

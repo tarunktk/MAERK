@@ -9,10 +9,9 @@ angular
         Employee.createEmp(newEmp);
         $mdDialog.hide();
       }
-      $scope.cancel = function(){
-        $mdDialog.cancel();
-      }
-
+      // $scope.cancel = function(){
+      //   $mdDialog.cancel();
+      // }
     // $scope.first_name = data.first_name;
     // $scope.last_name = data.last_name;
     // $scope.client = data.client;

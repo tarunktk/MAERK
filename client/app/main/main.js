@@ -23,4 +23,11 @@ angular.module('maerkApp')
       controllerAs:'ctrl',
       authenticate:true
     })
+    .state("main.add",{
+      url:"/addEmployee",
+      templateUrl:"app/main/employees/addEmployee/addEmployee.html",
+      controller:'AddCtrl',
+      controllerAs:'project',
+      authenticate:true
+    })
   });

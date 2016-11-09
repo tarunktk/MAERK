@@ -39,7 +39,7 @@ var employeeSchema = new mongoose.Schema({
     require: true
   },
 
-    Insurance: {
+    insurance: {
     type : Number,
     require: true
   },
@@ -49,7 +49,7 @@ var employeeSchema = new mongoose.Schema({
     require: true
   },
 
-    Immigration: {
+    immigration: {
     type : Number,
     require: true
   },

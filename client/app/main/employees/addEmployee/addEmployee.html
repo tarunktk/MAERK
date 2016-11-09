@@ -1,89 +1,89 @@
 <md-dialog flex="60" layout="column">
 <md-content layout-padding>
-  <form name="projectForm">
+  <form name="projectForm" ng-submit=add(employee) novalidate>
 
     <h3> Employee Info </h3>
-<md-dialog-content>
+<md-dialog-content >
     <div layout-gt-xs="row">
       <md-input-container flex="60">
         <label>First Name</label>
-        <input required name="FirstName" ng-model="project.firstName">
+        <input required name="FirstName" ng-model="project.emp.first_name">
       </md-input-container>
       <md-input-container flex="60">
         <label>Last Name</label>
-        <input required name="LastName" ng-model="project.lastName">
+        <input required name="LastName" ng-model="project.emp.last_name">
       </md-input-container>
     </div>
     <div layout-gt-xs="row">
       <md-input-container flex="60">
         <label>Client</label>
-        <input required name="client" ng-model="project.clientName">
+        <input required name="client" ng-model="project.emp.client">
       </md-input-container>
       <md-input-container flex="60">
         <label>Skills</label>
-        <input required name="skills" ng-model="project.skills">
+        <input required name="skills" ng-model="project.emp.skill">
       </md-input-container>
     </div>
     <div layout-gt-xs="row">
       <md-input-container flex="60">
         <label>Recruiter</label>
-        <input required name="recruiterName" ng-model="project.recruiterName">
+        <input required name="recruiterName" ng-model="project.emp.recruiter">
       </md-input-container>
 
       <md-input-container flex="60">
         <label>Placement Type</label>
-        <md-select name="type" ng-model="project.type" required>
-          <md-option>Part-time</md-option>
-          <md-option >Full-time</md-option>
-          <md-option >Project</md-option>
+        <md-select name="placement_type" ng-model="project.emp.placement_type" required>
+          <md-option ng-value="part-time">Part-time</md-option>
+          <md-option ng-value="full-time">Full-time</md-option>
+          <md-option ng-value="project">Project</md-option>
         </md-select>
       </md-input-container>
     </div>
     <div layout-gt-xs="row">
       <md-input-container class="md-block" flex="60">
         <label>Salary (USD)</label>
-        <input required type="number" step="any" name="rate" ng-model="project.salary" >
+        <input required type="number" step="any" name="rate" ng-model="project.emp.salary" >
       </md-input-container>
 
       <md-input-container class="md-block" flex="60">
         <label>Insurance (USD)</label>
-        <input required type="number" step="any" name="rate" ng-model="project.insurance">
+        <input required type="number" step="any" name="rate" ng-model="project.emp.insurance">
       </md-input-container>
     </div>
     <div layout-gt-xs="row">
       <md-input-container class="md-block" flex="60">
         <label>Relocation</label>
-        <input required name="Relocation" ng-model="project.relocation">
+        <input required name="Relocation" ng-model="project.emp.relocation">
       </md-input-container>
       <md-input-container class="md-block" flex="60">
         <label>Immigration</label>
-        <input required name="immigration" ng-model="project.immigration">
+        <input required name="immigration" ng-model="project.emp.immigration">
       </md-input-container>
     </div>
     <div layout-gt-xs="row">
       <md-input-container class="md-block" flex="60">
         <label>Pay Vacation Cost (USD)</label>
-        <input required type="number" step="any" name="rate" ng-model="project.vacation">
+        <input required type="number" step="any" name="pay_vacation_cost" ng-model="project.emp.pay_vacation_cost">
       </md-input-container>
 
       <md-input-container class="md-block" flex="60">
         <label>Ksquare Hourly Cost (USD)</label>
-        <input required type="number" step="any" name="rate" ng-model="project.hourly">
+        <input required type="number" step="any" name="ksquare_hourly_cost" ng-model="project.emp.ksquare_hourly_cost">
       </md-input-container>
     </div>
     <div layout-gt-xs="row">
       <md-input-container class="md-block" flex="60">
         <label>Target Bill Rate (USD)</label>
-        <input required type="number" step="any" name="rate" ng-model="project.billrate">
+        <input required type="number" step="any" name="target_bill_rate" ng-model="project.emp.target_bill_rate">
       </md-input-container>
 
       <md-input-container class="md-block" flex="60">
         <label>Client Bill Pay (USD)</label>
-        <input required type="number" step="any" name="rate" ng-model="project.billpay">
+        <input required type="number" step="any" name="client_bill_pay" ng-model="project.emp.client_bill_pay">
       </md-input-container>
     </div>
       <div>
-        <md-button type="submit">Submit</md-button>
+        <md-button type="submit" >Submit</md-button>
       </div>
 </md-dialog-content>
   </form>

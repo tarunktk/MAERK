@@ -8,7 +8,7 @@
    <md-icon style="color:wheat" class="material-icons">&#xE8B6;</md-icon>
    <input ng-model="filterID" placeholder="Search" style="color:wheat;padding-left:25px;margin-left:5px">
    <div ng-hide="true">
-       {{(filteredList = (employeeList | filter: filterID))}}
+       {{(filteredItems = (employeeList | filter: filterID))}}
    </div>
 </md-input-container>
 
@@ -43,11 +43,10 @@
        </md-button>
        <mdt-table table-card="{visible: true, columnSelector: true}"
                   selectable-rows="true"
-                  save-row-callback="saveRowCallback(row)"
                   paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}"
                   selected-row-callback="selectedRowCallback(rows)"
                   mdt-row="{
-                    data: employeeList,
+                    data: filteredItems,
                     'table-row-id-key': '_id',
                       'column-keys': [
                           'first_name',

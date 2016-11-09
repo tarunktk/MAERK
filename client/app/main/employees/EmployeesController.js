@@ -144,7 +144,7 @@
         var confirm = $mdDialog.confirm()
           .title('You sure to get rid of this SOB(s)??')
           .targetEvent(ev)
-          .ok('FINISH HIM!')
+          .ok('FINISH HIM/THEM!')
           .cancel('Nah! Just kidding');
         $mdDialog.show(confirm).then(function() {
           $scope.employeeList = $scope.employeeList.filter(function(employee) {

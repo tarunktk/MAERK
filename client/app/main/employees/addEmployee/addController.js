@@ -1,17 +1,18 @@
 angular
   .module('maerkApp')
-  .controller('AddCtrl', function($scope, data) {
+  .controller('AddCtrl', function($scope, data, $mdDialog, Employee) {
     console.log(data);
     this.emp=data
-    function AddCtrl($scope, Employee, $mdDialog){
+
       $scope.add = function(newEmp){
+        console.log("hi")
         Employee.createEmp(newEmp);
         $mdDialog.hide();
       }
-      // $scope.cancel = function(){
-      //   $mdDialog.cancel();
-      // }
-    }
+      $scope.cancel = function(){
+        $mdDialog.cancel();
+      }
+
     // $scope.first_name = data.first_name;
     // $scope.last_name = data.last_name;
     // $scope.client = data.client;

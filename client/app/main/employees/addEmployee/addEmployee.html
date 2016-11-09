@@ -1,6 +1,6 @@
 <md-dialog flex="60" layout="column">
 <md-content layout-padding>
-  <form name="projectForm" ng-submit=add(employee) novalidate>
+  <form name="projectForm" ng-submit=add(project.emp) novalidate>
 
     <h3> Employee Info </h3>
 <md-dialog-content >
@@ -53,11 +53,11 @@
     <div layout-gt-xs="row">
       <md-input-container class="md-block" flex="60">
         <label>Relocation</label>
-        <input required name="Relocation" ng-model="project.emp.relocation">
+        <input required type="number" name="Relocation" ng-model="project.emp.relocation">
       </md-input-container>
       <md-input-container class="md-block" flex="60">
         <label>Immigration</label>
-        <input required name="immigration" ng-model="project.emp.immigration">
+        <input required type="number" name="immigration" ng-model="project.emp.immigration">
       </md-input-container>
     </div>
     <div layout-gt-xs="row">
@@ -84,6 +84,7 @@
     </div>
       <div>
         <md-button type="submit" >Submit</md-button>
+          <!-- <md-button type="cancel" >Cancel</md-button> -->
       </div>
 </md-dialog-content>
   </form>

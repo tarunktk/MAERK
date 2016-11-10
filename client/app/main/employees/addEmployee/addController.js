@@ -9,6 +9,11 @@ angular
         Employee.createEmp(newEmp);
         $mdDialog.hide();
       }
+      $scope.edit = function(editEmp){
+        console.log("ohh myyy")
+        Employee.editEmp(editEmp);
+        $mdDialog.hide();
+      }
 
       // this.types = [{label: 'Part Time', value: 'part-time'}, {label: 'Full Time', value: 'full-time'}, {label: 'Project', value: 'project'}];
       // function toTitleCase(str)

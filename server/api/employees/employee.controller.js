@@ -28,8 +28,10 @@ function handleEntityNotFound(res) {
     if (!entity) {
       res.status(404).end();
       return null;
+      console.log(entity)
     }
     return entity;
+  
   };
 }
 

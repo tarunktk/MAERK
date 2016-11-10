@@ -9,6 +9,13 @@ angular
         Employee.createEmp(newEmp);
         $mdDialog.hide();
       }
+
+      // this.types = [{label: 'Part Time', value: 'part-time'}, {label: 'Full Time', value: 'full-time'}, {label: 'Project', value: 'project'}];
+      // function toTitleCase(str)
+      // {
+      //     return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+      // }
+      // this.type = {label: toTitleCase(data.placement_type.replace('-', ' ')) , value: data.placement_type};
       // $scope.cancel = function(){
       //   $mdDialog.cancel();
       // }

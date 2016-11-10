@@ -41,7 +41,7 @@
        <md-button class=" md-primary" ng-click="showAdvanced($event)">
          Add  an Employee <md-tooltip>Another one??? Really????</md-tooltip>
        </md-button>
-       <mdt-table table-card="{visible: true, columnSelector: true}"
+       <mdt-table
                   selectable-rows="true"
                   paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}"
                   selected-row-callback="selectedRowCallback(rows)"
@@ -54,7 +54,7 @@
                           'client',
                           'skill',
                           'recruiter',
-                          'salary'
+                          'placement_type'
                       ]
                     }">
 
@@ -78,9 +78,12 @@
      <mdt-column align-rule="left" column-sort="true">Client</mdt-column>
      <mdt-column align-rule="left" column-sort="true">Skills</mdt-column>
      <mdt-column align-rule="left" column-sort="true">Recruiter</mdt-column>
-     <mdt-column align-rule="left"column-sort="true">Salary</mdt-column>
+     <mdt-column align-rule="left"column-sort="true">Placement Type</mdt-column>
    </mdt-header-row>
 
 
  </mdt-table>
 </md-content>
+
+
+<!-- table-card="{visible: true, columnSelector: true}" -->

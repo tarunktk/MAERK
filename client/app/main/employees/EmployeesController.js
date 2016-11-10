@@ -163,23 +163,6 @@
           }
           return -1;
         }
-        $mdDialog.show({
-            controller: 'AddCtrl',
-            controllerAs: 'project',
-            locals: {
-              data: selected
-            },
-            templateUrl: 'app/main/employees/addEmployee/addEmployee.html',
-            parent: angular.element(document.body),
-            targetEvent: ev,
-            clickOutsideToClose: true,
-            fullscreen: $scope.customFullscreen
-            // resolve: {
-            //   data: function() {
-            //     return selected;
-            //   }
-            // }
-          })
         var selected = arrayObjectOf($scope.employeeList, $scope.selected[0]);
         console.log($scope.employeeList);
         $mdDialog.show({

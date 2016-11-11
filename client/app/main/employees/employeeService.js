@@ -17,6 +17,7 @@
      }
    });
 
+
    var employees = empResource.query();
 
    return {
@@ -29,7 +30,7 @@
 
      updateEmp : function(data){
      empResource.update({_id:data._id},data).$promise.then(function(editEmp) {
-       // add shit
+       //
      });
    }
  }

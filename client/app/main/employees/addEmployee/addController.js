@@ -6,7 +6,7 @@ angular
 
     $scope.add = function(newEmp){
        // console.log('hi')
-       if(data){
+       if(data) {
          Employee.updateEmp(newEmp);
        }else{
          Employee.createEmp(newEmp);

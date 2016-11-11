@@ -8,26 +8,41 @@
           <md-input-container flex="60">
             <label>First Name</label>
             <input required name="FirstName" ng-model="project.emp.first_name">
+            <div ng-messages="projectForm.FirstName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
           <md-input-container flex="60">
             <label>Last Name</label>
             <input required name="LastName" ng-model="project.emp.last_name">
+            <div ng-messages="projectForm.LastName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
         </div>
         <div layout-gt-xs="row">
           <md-input-container flex="60">
             <label>Client</label>
             <input required name="client" ng-model="project.emp.client">
+            <div ng-messages="projectForm.client.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
           <md-input-container flex="60">
             <label>Skills</label>
             <input required name="skills" ng-model="project.emp.skill">
+            <div ng-messages="projectForm.skills.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
         </div>
         <div layout-gt-xs="row">
           <md-input-container flex="60">
             <label>Recruiter</label>
             <input required name="recruiterName" ng-model="project.emp.recruiter">
+            <div ng-messages="projectForm.recruiterName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
           <md-input-container class="md-block" flex="60">
             <label>Placement Type</label>
@@ -36,6 +51,9 @@
               <md-option value="Full-time">Full-time</md-option>
               <md-option value="Project">Project</md-option>
             </md-select>
+            <div ng-messages="projectForm.placement_type.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
           <!-- <md-input-container flex="60">
         <label>Placement Type</label>
@@ -48,48 +66,69 @@
         </div>
         <div layout-gt-xs="row">
           <md-input-container class="md-block" flex="60">
-            <label>Salary (USD)</label>
-            <input required type="number" step="any" name="rate" ng-model="project.emp.salary">
-            <div ng-messages="projectForm.salary.$error" multiple md-auto-hide="false">
-              <div ng-message="required">Required field. "Please enter a number"</div>
-            </div>
+            <label> Salary (USD)</label>
+            <input required type="number" min="0" step="any" name="salary" ng-model="project.emp.salary">
+            <div ng-messages="projectForm.salary.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
 
           <md-input-container class="md-block" flex="60">
             <label>Insurance (USD)</label>
-            <input required type="number" step="any" name="rate" ng-model="project.emp.insurance">
+            <input required type="number" min="0" step="any" name="Insurance" ng-model="project.emp.insurance">
+            <div ng-messages="projectForm.Insurance.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
         </div>
         <div layout-gt-xs="row">
           <md-input-container class="md-block" flex="60">
             <label>Relocation</label>
-            <input required type="number" name="Relocation" ng-model="project.emp.relocation">
+            <input required type="number" min="0" name="Relocation" ng-model="project.emp.relocation">
+            <div ng-messages="projectForm.Relocation.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
           <md-input-container class="md-block" flex="60">
             <label>Immigration</label>
-            <input required type="number" name="immigration" ng-model="project.emp.immigration">
+            <input required type="number" min="0" name="immigration" ng-model="project.emp.immigration">
+            <div ng-messages="projectForm.immigration.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
         </div>
         <div layout-gt-xs="row">
           <md-input-container class="md-block" flex="60">
             <label>Pay Vacation Cost (USD)</label>
-            <input required type="number" step="any" name="pay_vacation_cost" ng-model="project.emp.pay_vacation_cost">
+            <input required type="number" min="0" step="any" name="pay_vacation_cost" ng-model="project.emp.pay_vacation_cost">
+            <div ng-messages="projectForm.pay_vacation_cost.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
 
           <md-input-container class="md-block" flex="60">
             <label>Ksquare Hourly Cost (USD)</label>
-            <input required type="number" step="any" name="ksquare_hourly_cost" ng-model="project.emp.ksquare_hourly_cost">
+            <input required type="number"  min="0" step="any" name="ksquare_hourly_cost" ng-model="project.emp.ksquare_hourly_cost">
+            <div ng-messages="projectForm.ksquare_hourly_cost.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
         </div>
         <div layout-gt-xs="row">
           <md-input-container class="md-block" flex="60">
             <label>Target Bill Rate (USD)</label>
-            <input required type="number" step="any" name="target_bill_rate" ng-model="project.emp.target_bill_rate">
+            <input required type="number"  min="0" step="any" name="target_bill_rate" ng-model="project.emp.target_bill_rate">
+            <div ng-messages="projectForm.target_bill_rate.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
 
           <md-input-container class="md-block" flex="60">
             <label>Client Bill Pay (USD)</label>
-            <input required type="number" step="any" name="client_bill_pay" ng-model="project.emp.client_bill_pay">
+            <input required type="number" min="0" step="any" name="client_bill_pay" ng-model="project.emp.client_bill_pay">
+            <div ng-messages="projectForm.client_bill_pay.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
           </md-input-container>
         </div>
         <div>

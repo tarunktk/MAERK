@@ -3,7 +3,8 @@
 
 (function() {
 
- function EmployeeResource($resource) {
+  function EmployeeResource($resource) {
+
 
 
    var empResource = $resource('/api/employees/:id/:controller', {
@@ -36,6 +37,7 @@
  }
 }
 
- angular.module('maerkApp')
-   .factory('Employee', EmployeeResource);
+
+  angular.module('maerkApp')
+    .factory('Employee', EmployeeResource);
 })();

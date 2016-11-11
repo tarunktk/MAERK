@@ -1,51 +1,48 @@
-<md-content  layout-margin>
+<md-content layout-margin>
 
 
-          <md-toolbar>
+  <md-toolbar>
     <div class="md-toolbar-tools">
 
       <md-input-container md-no-float class="md-accent" flex="50" style="padding-bottom:0px;margin-left:25px">
-   <md-icon style="color:wheat" class="material-icons">&#xE8B6;</md-icon>
-   <input ng-model="filterID" placeholder="Search" style="color:wheat;padding-left:25px;margin-left:5px">
-   <div ng-hide="true">
-       {{(filteredItems = (employeeList | filter: filterID))}}
-   </div>
-</md-input-container>
+        <md-icon style="color:wheat" class="material-icons">&#xE8B6;</md-icon>
+        <input ng-model="filterID" placeholder="Search" style="color:wheat;padding-left:25px;margin-left:5px">
+        <div ng-hide="true">
+          {{(filteredItems = (employeeList | filter: filterID))}}
+        </div>
+      </md-input-container>
 
 
-        <span flex></span>
+      <span flex></span>
 
-        <md-button  class="md-icon-button" ng-show="showEditButton"  ng-click="showEdit($event)" aria-label="Edit">
-          <md-tooltip>Edit</md-tooltip>
+      <md-button class="md-icon-button" ng-show="showEditButton" ng-click="showEdit($event)" aria-label="Edit">
+        <md-tooltip>Edit</md-tooltip>
         <i class="material-icons" md-ink-ripple="#1df416">mode_edit</i>
-        </md-button>
+      </md-button>
 
-        <md-button  class="md-icon-button" ng-show="showDeleteButton"  ng-click="showDelete($event)" aria-label="Delete">
-          <md-tooltip>Delete</md-tooltip>
+      <md-button class="md-icon-button" ng-show="showDeleteButton" ng-click="showDelete($event)" aria-label="Delete">
+        <md-tooltip>Delete</md-tooltip>
         <i class="material-icons" md-ink-ripple="#1df416">delete</i>
-        </md-button>
+      </md-button>
 
 
-<md-button ng-show="showActivateButton">
-    <md-tooltip>Activate/Deactivate</md-tooltip>
-        <md-switch ng-model="data.cb2" aria-label="Switch 2"  ng-click="showActivate($event)" ng-hide="" ng-true-value="'Activate'" ng-false-value="'Deactivate'">
-            {{ }}
+      <md-button ng-show="showActivateButton">
+        <md-tooltip>Activate/Deactivate</md-tooltip>
+        <md-switch ng-model="data.cb2" aria-label="Switch 2" ng-click="showActivate($event)" ng-hide="" ng-true-value="'Activate'" ng-false-value="'Deactivate'">
+          {{ }}
         </md-switch>
-</md-button>
+      </md-button>
 
 
 
-   </div>
-</md-toolbar>
-       </md-card>
-       <md-button class=" md-primary" ng-click="showAdvanced($event)">
-         Add  an Employee <md-tooltip>Another one??? Really????</md-tooltip>
-       </md-button>
-       <mdt-table
-                  selectable-rows="true"
-                  paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}"
-                  selected-row-callback="selectedRowCallback(rows)"
-                  mdt-row="{
+    </div>
+  </md-toolbar>
+  </md-card>
+  <md-button class=" md-primary" ng-click="showAdvanced($event)">
+    Add an Employee
+    <md-tooltip>Another one??? Really????</md-tooltip>
+  </md-button>
+  <mdt-table selectable-rows="true" paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}" selected-row-callback="selectedRowCallback(rows)" mdt-row="{
                     data: filteredItems,
                     'table-row-id-key': '_id',
                       'column-keys': [
@@ -61,7 +58,7 @@
 
 
 
-                   <!-- <mdt-row ng-repeat="employee in employeeList">
+    <!-- <mdt-row ng-repeat="employee in employeeList">
                      <mdt-cell>{{employee.employeeId}}</mdt-cell>
                      <mdt-cell>{{employee.firstName}}</mdt-cell>
                      <mdt-cell>{{employee.lastName}}</mdt-cell>
@@ -71,18 +68,18 @@
                      <mdt-cell>{{employee.revenue | currency }}</mdt-cell>
                    </mdt-row> -->
 
-   <mdt-header-row >
-     <!-- <mdt-column align-rule="left" column-sort="true" exclude-from-column-selector="true">ID</mdt-column> -->
-     <mdt-column align-rule="left" column-sort="true">First Name</mdt-column>
-     <mdt-column align-rule="left" column-sort="true">Last Name</mdt-column>
-     <mdt-column align-rule="left" column-sort="true">Client</mdt-column>
-     <mdt-column align-rule="left" column-sort="true">Skills</mdt-column>
-     <mdt-column align-rule="left" column-sort="true">Recruiter</mdt-column>
-     <mdt-column align-rule="left"column-sort="true">Placement Type</mdt-column>
-   </mdt-header-row>
+    <mdt-header-row>
+      <!-- <mdt-column align-rule="left" column-sort="true" exclude-from-column-selector="true">ID</mdt-column> -->
+      <mdt-column align-rule="left" column-sort="true">First Name</mdt-column>
+      <mdt-column align-rule="left" column-sort="true">Last Name</mdt-column>
+      <mdt-column align-rule="left" column-sort="true">Client</mdt-column>
+      <mdt-column align-rule="left" column-sort="true">Skills</mdt-column>
+      <mdt-column align-rule="left" column-sort="true">Recruiter</mdt-column>
+      <mdt-column align-rule="left" column-sort="true">Placement Type</mdt-column>
+    </mdt-header-row>
 
 
- </mdt-table>
+  </mdt-table>
 </md-content>
 
 

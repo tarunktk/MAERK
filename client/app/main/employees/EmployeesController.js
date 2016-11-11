@@ -125,8 +125,8 @@
             controller: 'AddCtrl',
             controllerAs: 'project',
             templateUrl: 'app/main/employees/addEmployee/addEmployee.html',
-            locals:{
-              data:null
+            locals: {
+              data: null
             },
             parent: angular.element(document.body),
             targetEvent: ev,
@@ -156,6 +156,14 @@
           $scope.status = 'You decided to keep your debt.';
         });
       };
+
+      // $scope.showConfirm = function(ev) {
+      //   var confirm = $mdDialog.confirm()
+      //     .title('Do you want to edit Employee information?')
+      //     .targetEvent(ev)
+      //     .ok('YES')
+      //     .cancel('Nah!!');
+      //   }
       $scope.showEdit = function(ev) {
         var arrayObjectOf = function(myArray, searchTerm) {
           for (var i = 0, len = myArray.length; i < len; i++) {
@@ -164,22 +172,23 @@
           return -1;
         }
         var selected = arrayObjectOf($scope.employeeList, $scope.selected[0]);
+        console.log($scope.employeeList);
         $mdDialog.show({
             controller: 'AddCtrl',
             controllerAs: 'project',
-            locals:{
+            locals: {
               data: selected
             },
             templateUrl: 'app/main/employees/addEmployee/addEmployee.html',
             parent: angular.element(document.body),
             targetEvent: ev,
             clickOutsideToClose: true,
-            fullscreen: $scope.customFullscreen,
-            // resolve: {
-            //   data: function() {
-            //     return selected;
-            //   }
-            // }
+            fullscreen: $scope.customFullscreen
+              // resolve: {
+              //   data: function() {
+              //     return selected;
+              //   }
+              // }
           })
           .then(function(answer) {
             $scope.status = 'You said the information was "' + answer + '".';

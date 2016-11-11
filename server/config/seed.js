@@ -71,7 +71,7 @@ User.find({}).remove()
         "DDA"
       ],
       "recruiter": "Arnold",
-      "placement_type": "project",
+      "placement_type": "Project",
       "salary": 99895,
       "insurance": 1000,
       "relocation": 1715,
@@ -93,7 +93,7 @@ User.find({}).remove()
         "Clinical Development"
       ],
       "recruiter": "Ricky",
-      "placement_type": "part-time",
+      "placement_type": "Part-time",
       "salary": 80613,
       "insurance": 611,
       "relocation": 3653,
@@ -113,7 +113,7 @@ User.find({}).remove()
         "Screening"
       ],
       "recruiter": "Bobby",
-      "placement_type": "part-time",
+      "placement_type": "Part-time",
       "salary": 91679,
       "insurance": 352,
       "relocation": 2516,
@@ -136,7 +136,7 @@ User.find({}).remove()
         "Knowledge Sharing"
       ],
       "recruiter": "Ricky",
-      "placement_type": "full-time",
+      "placement_type": "Full-time",
       "salary": 71558,
       "insurance": 288,
       "relocation": 4861,
@@ -159,7 +159,7 @@ User.find({}).remove()
         "DVD Authoring"
       ],
       "recruiter": "Ricky",
-      "placement_type": "full-time",
+      "placement_type": "Full-time",
       "salary": 63776,
       "insurance": 386,
       "relocation": 3961,
@@ -181,7 +181,7 @@ User.find({}).remove()
         "OBIEE"
       ],
       "recruiter": "Arnold",
-      "placement_type": "project",
+      "placement_type": "Project",
       "salary": 76511,
       "insurance": 941,
       "relocation": 1557,
@@ -202,7 +202,7 @@ User.find({}).remove()
         "Lawson HRIS"
       ],
       "recruiter": "Bobby",
-      "placement_type": "part-time",
+      "placement_type": "Part-time",
       "salary": 86177,
       "insurance": 346,
       "relocation": 1280,
@@ -222,7 +222,7 @@ User.find({}).remove()
         "UCC filings"
       ],
       "recruiter": "Rocky",
-      "placement_type": "project",
+      "placement_type": "Project",
       "salary": 73004,
       "insurance": 613,
       "relocation": 2500,
@@ -245,7 +245,7 @@ User.find({}).remove()
         "NPO"
       ],
       "recruiter": "Ricky",
-      "placement_type": "project",
+      "placement_type": "Project",
       "salary": 56728,
       "insurance": 264,
       "relocation": 4818,
@@ -267,7 +267,7 @@ User.find({}).remove()
         "RPG III"
       ],
       "recruiter": "Ricky",
-      "placement_type": "project",
+      "placement_type": "Project",
       "salary": 53474,
       "insurance": 784,
       "relocation": 3122,
@@ -289,7 +289,7 @@ User.find({}).remove()
         "DVD"
       ],
       "recruiter": "Bobby",
-      "placement_type": "project",
+      "placement_type": "Project",
       "salary": 97786,
       "insurance": 346,
       "relocation": 3054,
@@ -312,7 +312,7 @@ User.find({}).remove()
         "Drupal"
       ],
       "recruiter": "Bobby",
-      "placement_type": "full-time",
+      "placement_type": "Full-time",
       "salary": 86142,
       "insurance": 511,
       "relocation": 4280,
@@ -335,7 +335,7 @@ User.find({}).remove()
         "User Scenarios"
       ],
       "recruiter": "Bobby",
-      "placement_type": "project",
+      "placement_type": "Project",
       "salary": 97995,
       "insurance": 166,
       "relocation": 2262,
@@ -357,7 +357,7 @@ User.find({}).remove()
         "Type Approval"
       ],
       "recruiter": "Bobby",
-      "placement_type": "full-time",
+      "placement_type": "Full-time",
       "salary": 67533,
       "insurance": 347,
       "relocation": 3594,
@@ -389,7 +389,7 @@ User.find({}).remove()
                  "Working Abroad"
              ],
              "recruiter": "Ricky",
-             "placement_type": "part-time",
+             "placement_type": "Part-time",
              "salary": 88339,
              "insurance": 872,
              "relocation": 3646,

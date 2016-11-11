@@ -2,16 +2,31 @@ angular
   .module('maerkApp')
   .controller('AddCtrl', function($scope, data, $mdDialog, Employee) {
     console.log(data);
-    this.emp=data
+    this.emp = data
 
-      $scope.add = function(newEmp){
+    $scope.add = function(newEmp) {
         console.log("hi")
         Employee.createEmp(newEmp);
         $mdDialog.hide();
       }
-      // $scope.cancel = function(){
-      //   $mdDialog.cancel();
-      // }
+      $scope.cancel = function(){
+        $mdDialog.cancel();
+      }
+      $scope.edit = function(editEmp){
+        console.log(data)
+        Employee.updateEmp(editEmp);
+        $mdDialog.hide();
+      }
+
+    // this.types = [{label: 'Part Time', value: 'part-time'}, {label: 'Full Time', value: 'full-time'}, {label: 'Project', value: 'project'}];
+    // function toTitleCase(str)
+    // {
+    //     return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    // }
+    // this.type = {label: toTitleCase(data.placement_type.replace('-', ' ')) , value: data.placement_type};
+    // $scope.cancel = function(){
+    //   $mdDialog.cancel();
+    // }
     // $scope.first_name = data.first_name;
     // $scope.last_name = data.last_name;
     // $scope.client = data.client;

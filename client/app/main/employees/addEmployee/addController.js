@@ -2,21 +2,22 @@ angular
   .module('maerkApp')
   .controller('AddCtrl', function($scope, data, $mdDialog, Employee) {
     console.log(data);
-    this.emp = data
 
-    $scope.add = function(newEmp) {
-        console.log("hi")
-        Employee.createEmp(newEmp);
-        $mdDialog.hide();
-      }
-      $scope.cancel = function(){
-        $mdDialog.cancel();
-      }
-      $scope.edit = function(editEmp){
-        console.log(data)
-        Employee.updateEmp(editEmp);
-        $mdDialog.hide();
-      }
+    this.emp=angular.copy(data);
+
+    $scope.add = function(newEmp){
+       // console.log('hi')
+       if(data) {
+         Employee.updateEmp(newEmp);
+       }else{
+         Employee.createEmp(newEmp);
+       }
+       $mdDialog.hide();
+     }
+     $scope.cancel = function() {
+       $mdDialog.cancel();
+     }
+
 
     // this.types = [{label: 'Part Time', value: 'part-time'}, {label: 'Full Time', value: 'full-time'}, {label: 'Project', value: 'project'}];
     // function toTitleCase(str)

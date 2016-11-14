@@ -31,7 +31,6 @@
 
      updateEmp : function(data){
      empResource.update({_id:data._id},data).$promise.then(function(editEmp) {
-       //
      });
    }
  }

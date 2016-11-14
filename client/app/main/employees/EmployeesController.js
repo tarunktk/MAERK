@@ -38,6 +38,7 @@
 
       $scope.employeeList = Employee.getAll;
       $scope.status = '';
+
       $scope.showAdvanced = function(ev) {
         $mdDialog.show({
 
@@ -52,7 +53,6 @@
           clickOutsideToClose: true,
           fullscreen: $scope.customFullscreen
         })
-
       }
 
       $scope.showDelete = function(ev) {
@@ -102,7 +102,6 @@
           })
       }
       $scope.showConfirm = function(ev) {
-        // Appending dialog to document.body to cover sidenav in docs app
         var confirm = $mdDialog.confirm()
           .title('Are you sure you want to de activate the employee?')
           .textContent('')
@@ -110,8 +109,6 @@
           .targetEvent(ev)
           .ok('Yes!')
           .cancel('Cancel');
-
-
         $mdDialog.show(confirm).then(function() {
           $scope.deactivate()
           $scope.status = 'You decided to de activate the employee.';
@@ -119,24 +116,6 @@
           $scope.status = 'You decided to keep the employee.';
         })
       }
-
-      // // DELETE FUNCTIONALITY
-      // $scope.showDelete = function(ev) {
-      //   var confirm = $mdDialog.confirm()
-      //     .title('You sure to get rid of this SOB(s)??')
-      //     .targetEvent(ev)
-      //     .ok('FINISH HIM/THEM!')
-      //     .cancel('Nah! Just kidding');
-      //   $mdDialog.show(confirm).then(function() {
-      //     $scope.employeeList = $scope.employeeList.filter(function(employee) {
-      //       return $scope.selected.indexOf(employee._id) < 0;
-      //     });
-      //     console.log($scope.employeeList)
-      // })
-      // };
-
-      // $scope.showActivate = function(ev) {
-
 
       $scope.showConfirmAct = function(ev) {
         // Appending dialog to document.body to cover sidenav in docs app
@@ -161,9 +140,8 @@
         for (var i = 0; i < $scope.selected.length; i++) {
           for (var j = 0; j < $scope.employeeList.length; j++) {
             if ($scope.selected[i] == $scope.employeeList[j]._id) {
-              $scope.employeeList[j].status = true;
+              $scope.employeeList[j].activate = true;
               Employee.updateEmp($scope.employeeList[j]);
-              console.log
               console.log("hi")
             }
           }
@@ -171,33 +149,15 @@
       }
 
       $scope.deactivate = function() {
-          for (var i = 0; i < $scope.selected.length; i++) {
-            for (var j = 0; j < $scope.employeeList.length; j++) {
-              if ($scope.selected[i] == $scope.employeeList[j]._id) {
-                $scope.employeeList[i].status = false;
-                Employee.updateEmp($scope.employeeList[j]);
-              }
+        for (var i = 0; i < $scope.selected.length; i++) {
+          for (var j = 0; j < $scope.employeeList.length; j++) {
+            if ($scope.selected[i] == $scope.employeeList[j]._id) {
+              $scope.employeeList[j].activate = false;
+              Employee.updateEmp($scope.employeeList[j]);
+              console.log("hehhehehehe")
             }
           }
         }
-        // $scope.showActivate = function(ev) {
-        //
-        //   var confirm = $mdDialog.confirm()
-        //     .title('Activate/Deactivate an employee(s)')
-        //     .targetEvent(ev)
-        //     .ok('Yeah sure!!')
-        //     .cancel('No thanks!!');
-        //
-        //   $mdDialog.show(confirm).then(function() {
-        //     $scope.employeeList = $scope.employeeList.filter(function(employee) {
-        //       return $scope.selected.indexOf(employee._id) < 0;
-        //     });
-        //     $scope.status = 'You decided to get rid of your debt.';
-        //   }, function() {
-        //     $scope.status = 'You decided to keep your debt.';
-        //   });
-        // };
-
-    }
-  })
+      }
+    })
 })();

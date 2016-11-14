@@ -120,7 +120,7 @@
       $scope.showConfirmAct = function(ev) {
         // Appending dialog to document.body to cover sidenav in docs app
         var confirm = $mdDialog.confirm()
-          .title('Are you sure you want to activate the employee?')
+          .title('Are you sure you want to activate/Deactivate the employee?')
           .textContent('')
           .ariaLabel('Lucky day')
           .targetEvent(ev)

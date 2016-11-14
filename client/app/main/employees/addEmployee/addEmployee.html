@@ -1,9 +1,19 @@
 <md-dialog flex="60" layout="column">
-  <md-content layout-padding>
+  <!-- <md-content layout-padding> -->
     <form name="projectForm" ng-submit=add(project.emp) novalidate>
 
-      <h3> Employee Info </h3>
-      <md-dialog-content>
+      <!-- <h3> Employee Info </h3> -->
+      <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Employee Information</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <i class="material-icons">cancel</i>
+          <!-- <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon> -->
+        </md-button>
+      </div>
+    </md-toolbar>
+      <md-dialog-content layout-padding>
         <div layout-gt-xs="row">
           <md-input-container flex="60">
             <label>First Name</label>
@@ -138,5 +148,5 @@
         </div>
       </md-dialog-content>
     </form>
-  </md-content>
+  <!-- </md-content> -->
 </md-dialog>

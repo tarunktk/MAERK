@@ -87,13 +87,13 @@
         new empResource(newEmp).$save().then(function(d) {
           employees.push(d);
         })
-      }
+      },
 
-      //   updateEmp: function(data) {
-      //   empResource.update({
-      //     _id: data._id
-      //   }, data).$promise.then(function(editEmp) {});
-      // }
+        updateEmp: function(data) {
+        empResource.update({
+          _id: data._id
+        }, data).$promise.then(function(editEmp) {});
+      }
     }
   }
 

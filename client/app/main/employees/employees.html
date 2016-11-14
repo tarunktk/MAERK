@@ -25,13 +25,28 @@
         <i class="material-icons" md-ink-ripple="#1df416">delete</i>
       </md-button>
 
+      <md-menu>
+        <md-button aria-label="Open demo menu" ng-show="showActivateButton" ng-click="$mdOpenMenu($event)">
+         Status
+     </md-button>
+      <md-menu-content width="4">
+       <md-menu-item >
+         <md-button ng-click="showConfirmAct($event)">
+           <span md-menu-align-target>Activate</span> </md-button>
+       </md-menu-item>
+       <md-menu-item >
+         <md-button ng-click="showConfirm($event)">
+           <span md-menu-align-target>Deactivate</span> </md-button>
+       </md-menu-item>
+     </md-menu-content>
+   </md-menu>
 
-      <md-button ng-show="showActivateButton">
+      <!-- <md-button ng-show="showActivateButton">
         <md-tooltip>Activate/Deactivate</md-tooltip>
         <md-switch ng-model="data.cb2" aria-label="Switch 2" ng-click="showActivate($event)" ng-hide="" ng-true-value="'Activate'" ng-false-value="'Deactivate'">
           {{ }}
         </md-switch>
-      </md-button>
+      </md-button> -->
 
 
 

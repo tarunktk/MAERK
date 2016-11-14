@@ -103,7 +103,7 @@
       }
       $scope.showConfirm = function(ev) {
         var confirm = $mdDialog.confirm()
-          .title('Are you sure you want to de activate the employee?')
+          .title('Are you sure you want to Deactivate the employee?')
           .textContent('')
           .ariaLabel('Lucky day')
           .targetEvent(ev)
@@ -111,7 +111,7 @@
           .cancel('Cancel');
         $mdDialog.show(confirm).then(function() {
           $scope.deactivate()
-          $scope.status = 'You decided to de activate the employee.';
+          $scope.status = 'You decided to activate the employee.';
         }, function() {
           $scope.status = 'You decided to keep the employee.';
         })
@@ -120,7 +120,7 @@
       $scope.showConfirmAct = function(ev) {
         // Appending dialog to document.body to cover sidenav in docs app
         var confirm = $mdDialog.confirm()
-          .title('Are you sure you want to activate/Deactivate the employee?')
+          .title('Are you sure you want to Activate the employee?')
           .textContent('')
           .ariaLabel('Lucky day')
           .targetEvent(ev)
@@ -130,7 +130,7 @@
 
         $mdDialog.show(confirm).then(function() {
           $scope.activate()
-          $scope.status = 'You decided to activate the employee.';
+          $scope.status = 'You decided to deactivate the employee.';
         }, function() {
           $scope.status = 'You decided to cancel.';
         })

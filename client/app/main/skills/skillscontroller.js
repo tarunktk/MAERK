@@ -8,378 +8,217 @@
   function skillsController($scope, $log) {
     this.year = '';
     this.years = ['2016', '2015', '2014'];
-    $scope.nutritionList = [{
+    $scope.skillList = [{
 
-      first_name: 'Tarun',
-      last_name: 'Kondapalli',
-      client: 'Facebook'
+      skills: 'Tarun',
+      employeeCount: 'Kondapalli',
+      revenue: 'Facebook'
     }, {
 
-      first_name: 'Shrusti',
-      last_name: 'Adi',
-      client: 'Wells Fargo'
+      skills: 'Shrusti',
+      employeeCount: 'Adi',
+      revenue: 'Wells Fargo'
 
     }, {
-      first_name: 'Raju',
-      last_name: 'Lakshmi',
-      client: 'Verizon'
+      skills: 'Raju',
+      employeeCount: 'Lakshmi',
+      revenue: 'Verizon'
     }, {
 
-      first_name: 'Lekha',
-      last_name: 'Tamvada',
-      client: 'Gaao'
+      skills: 'Lekha',
+      employeeCount: 'Tamvada',
+      revenue: 'Gaao'
     }, {
 
-      first_name: 'Ashwini',
-      last_name: 'Vakada',
-      client: 'Ash'
+      skills: 'Ashwini',
+      employeeCount: 'Vakada',
+      revenue: 'Ash'
     }, {
 
-      first_name: 'Harsha',
-      last_name: 'Eruvuru',
-      client: 'BOFA'
+      skills: 'Harsha',
+      employeeCount: 'Eruvuru',
+      revenue: 'BOFA'
     }, {
 
-      first_name: 'Vinni',
-      last_name: 'Jagar',
-      client: 'Jagaur'
+      skills: 'Vinni',
+      employeeCount: 'Jagar',
+      revenue: 'Jagaur'
     }, {
 
-      first_name: 'Anusha',
-      last_name: 'Manikonda',
-      client: 'Chick'
+      skills: 'Anusha',
+      employeeCount: 'Manikonda',
+      revenue: 'Chick'
     }, {
 
-      first_name: 'Gnandeep',
-      last_name: 'Suriseeti',
-      client: 'Dal'
+      skills: 'Gnandeep',
+      employeeCount: 'Suriseeti',
+      revenue: 'Dal'
     }, {
 
-      first_name: 'Nitin',
-      last_name: 'kondapalli',
-      client: 'Baylor'
+      skills: 'Nitin',
+      employeeCount: 'kondapalli',
+      revenue: 'Baylor'
     } ]
 
     var reports =
     {
       'January':[{
 
-        first_name: 'Tarun',
-        last_name: 'Kondapalli',
-        client: 'Facebook'
+        skills: 'Tarun',
+        employeeCount: 'Kondapalli',
+        revenue: 'Facebook'
       }, {
 
-        first_name: 'Shrusti',
-        last_name: 'Adi',
-        client: 'Wells Fargo'
+        skills: 'Shrusti',
+        employeeCount: 'Adi',
+        revenue: 'Wells Fargo'
 
       }, {
-        first_name: 'Raju',
-        last_name: 'Lakshmi',
-        client: 'Verizon'
+        skills: 'Raju',
+        employeeCount: 'Lakshmi',
+        revenue: 'Verizon'
       }, {
 
-        first_name: 'Lekha',
-        last_name: 'Tamvada',
-        client: 'Gaao'
+        skills: 'Lekha',
+        employeeCount: 'Tamvada',
+        revenue: 'Gaao'
       }, {
 
-        first_name: 'Ashwini',
-        last_name: 'Vakada',
-        client: 'Ash'
+        skills: 'Ashwini',
+        employeeCount: 'Vakada',
+        revenue: 'Ash'
       }, {
 
-        first_name: 'Harsha',
-        last_name: 'Eruvuru',
-        client: 'BOFA'
+        skills: 'Harsha',
+        employeeCount: 'Eruvuru',
+        revenue: 'BOFA'
       }, {
 
-        first_name: 'Vinni',
-        last_name: 'Jagar',
-        client: 'Jagaur'
+        skills: 'Vinni',
+        employeeCount: 'Jagar',
+        revenue: 'Jagaur'
       }, {
 
-        first_name: 'Anusha',
-        last_name: 'Manikonda',
-        client: 'Chick'
+        skills: 'Anusha',
+        employeeCount: 'Manikonda',
+        revenue: 'Chick'
       }, {
 
-        first_name: 'Gnandeep',
-        last_name: 'Suriseeti',
-        client: 'Dal'
+        skills: 'Gnandeep',
+        employeeCount: 'Suriseeti',
+        revenue: 'Dal'
       }, {
 
-        first_name: 'Nitin',
-        last_name: 'kondapalli',
-        client: 'Baylor'
+        skills: 'Nitin',
+        employeeCount: 'kondapalli',
+        revenue: 'Baylor'
       } ],
       'February':[{
 
-        first_name: 'Donald',
-        last_name: 'Trump',
-        client: 'WH'
+        skills: 'Donald',
+        employeeCount: 'Trump',
+        revenue: 'WH'
       }, {
 
-        first_name: 'Hilary',
-        last_name: 'Clinton',
-        client: 'MIA'
+        skills: 'Hilary',
+        employeeCount: 'Clinton',
+        revenue: 'MIA'
 
       }, {
-        first_name: 'Ahwldkh',
-        last_name: 'kjsgckjsg',
-        client: 'eoihfwef'
+        skills: 'Ahwldkh',
+        employeeCount: 'kjsgckjsg',
+        revenue: 'eoihfwef'
       }, {
 
-        first_name: 'ldkhcdl',
-        last_name: 'podjcdp',
-        client: 'doihd'
+        skills: 'ldkhcdl',
+        employeeCount: 'podjcdp',
+        revenue: 'doihd'
       }, {
 
-        first_name: 'Ashwini',
-        last_name: 'lchdohcoe',
-        client: 'Ash'
+        skills: 'Ashwini',
+        employeeCount: 'lchdohcoe',
+        revenue: 'Ash'
       }, {
 
-        first_name: 'choecgoc',
-        last_name: 'Dickson',
-        client: 'BOFA'
+        skills: 'choecgoc',
+        employeeCount: 'Dickson',
+        revenue: 'BOFA'
       }, {
 
-        first_name: 'Vinni',
-        last_name: 'Jagar',
-        client: 'Jagaur'
+        skills: 'Vinni',
+        employeeCount: 'Jagar',
+        revenue: 'Jagaur'
       }, {
 
-        first_name: 'Anusha',
-        last_name: 'Manikonda',
-        client: 'adkchdkobc'
+        skills: 'Anusha',
+        employeeCount: 'Manikonda',
+        revenue: 'adkchdkobc'
       }, {
 
-        first_name: 'Gnandeep',
-        last_name: 'Suriseeti',
-        client: 'DHL'
+        skills: 'Gnandeep',
+        employeeCount: 'Suriseeti',
+        revenue: 'DHL'
       }, {
 
-        first_name: 'Nitin',
-        last_name: 'kondapalli',
-        client: 'Baylor'
+        skills: 'Nitin',
+        employeeCount: 'kondapalli',
+        revenue: 'Baylor'
       }, ],
       'March':[{
 
-        first_name: 'Donaldmarch',
-        last_name: 'Trump',
-        client: 'WH'
+        skills: 'Donaldmarch',
+        employeeCount: 'Trump',
+        revenue: 'WH'
       }, {
 
-        first_name: 'Hilarymarch',
-        last_name: 'Clinton',
-        client: 'MIA'
+        skills: 'Hilarymarch',
+        employeeCount: 'Clinton',
+        revenue: 'MIA'
 
       }, {
-        first_name: 'Ahwldkhmarch',
-        last_name: 'kjsgckjsg',
-        client: 'eoihfwef'
+        skills: 'Ahwldkhmarch',
+        employeeCount: 'kjsgckjsg',
+        revenue: 'eoihfwef'
       }, {
 
-        first_name: 'ldkhcdl',
-        last_name: 'podjcdp',
-        client: 'doihd'
+        skills: 'ldkhcdl',
+        employeeCount: 'podjcdp',
+        revenue: 'doihd'
       }, {
 
-        first_name: 'Ashwini',
-        last_name: 'lchdohcoe',
-        client: 'Ash'
+        skills: 'Ashwini',
+        employeeCount: 'lchdohcoe',
+        revenue: 'Ash'
       }, {
 
-        first_name: 'choecgoc',
-        last_name: 'Dickson',
-        client: 'BOFA'
+        skills: 'choecgoc',
+        employeeCount: 'Dickson',
+        revenue: 'BOFA'
       }, {
 
-        first_name: 'Vinni',
-        last_name: 'Jagar',
-        client: 'Jagaur'
+        skills: 'Vinni',
+        employeeCount: 'Jagar',
+        revenue: 'Jagaur'
       }, {
 
-        first_name: 'Anusha',
-        last_name: 'Manikonda',
-        client: 'adkchdkobc'
+        skills: 'Anusha',
+        employeeCount: 'Manikonda',
+        revenue: 'adkchdkobc'
       }, {
 
-        first_name: 'Gnandeep',
-        last_name: 'Suriseeti',
-        client: 'DHL'
+        skills: 'Gnandeep',
+        employeeCount: 'Suriseeti',
+        revenue: 'DHL'
       }, {
 
-        first_name: 'Nitin',
-        last_name: 'kondapalli',
-        client: 'Baylor'
+        skills: 'Nitin',
+        employeeCount: 'kondapalli',
+        revenue: 'Baylor'
       }, ]
 
     }
     this.updateMonth = function(month) {
-      $scope.nutritionList = reports[month]
-    //   switch (month) {
-    //     case 'January':
-    //       $scope.nutritionList = [{
-    //
-    //         first_name: 'Tarun',
-    //         last_name: 'Kondapalli',
-    //         client: 'Facebook'
-    //       }, {
-    //
-    //         first_name: 'Shrusti',
-    //         last_name: 'Adi',
-    //         client: 'Wells Fargo'
-    //
-    //       }, {
-    //         first_name: 'Raju',
-    //         last_name: 'Lakshmi',
-    //         client: 'Verizon'
-    //       }, {
-    //
-    //         first_name: 'Lekha',
-    //         last_name: 'Tamvada',
-    //         client: 'Gaao'
-    //       }, {
-    //
-    //         first_name: 'Ashwini',
-    //         last_name: 'Vakada',
-    //         client: 'Ash'
-    //       }, {
-    //
-    //         first_name: 'Harsha',
-    //         last_name: 'Eruvuru',
-    //         client: 'BOFA'
-    //       }, {
-    //
-    //         first_name: 'Vinni',
-    //         last_name: 'Jagar',
-    //         client: 'Jagaur'
-    //       }, {
-    //
-    //         first_name: 'Anusha',
-    //         last_name: 'Manikonda',
-    //         client: 'Chick'
-    //       }, {
-    //
-    //         first_name: 'Gnandeep',
-    //         last_name: 'Suriseeti',
-    //         client: 'Dal'
-    //       }, {
-    //
-    //         first_name: 'Nitin',
-    //         last_name: 'kondapalli',
-    //         client: 'Baylor'
-    //       }, ];
-    //       return;
-    //     case 'February':
-    //       $scope.nutritionList = [{
-    //
-    //         first_name: 'Donald',
-    //         last_name: 'Trump',
-    //         client: 'WH'
-    //       }, {
-    //
-    //         first_name: 'Hilary',
-    //         last_name: 'Clinton',
-    //         client: 'MIA'
-    //
-    //       }, {
-    //         first_name: 'Ahwldkh',
-    //         last_name: 'kjsgckjsg',
-    //         client: 'eoihfwef'
-    //       }, {
-    //
-    //         first_name: 'ldkhcdl',
-    //         last_name: 'podjcdp',
-    //         client: 'doihd'
-    //       }, {
-    //
-    //         first_name: 'Ashwini',
-    //         last_name: 'lchdohcoe',
-    //         client: 'Ash'
-    //       }, {
-    //
-    //         first_name: 'choecgoc',
-    //         last_name: 'Dickson',
-    //         client: 'BOFA'
-    //       }, {
-    //
-    //         first_name: 'Vinni',
-    //         last_name: 'Jagar',
-    //         client: 'Jagaur'
-    //       }, {
-    //
-    //         first_name: 'Anusha',
-    //         last_name: 'Manikonda',
-    //         client: 'adkchdkobc'
-    //       }, {
-    //
-    //         first_name: 'Gnandeep',
-    //         last_name: 'Suriseeti',
-    //         client: 'DHL'
-    //       }, {
-    //
-    //         first_name: 'Nitin',
-    //         last_name: 'kondapalli',
-    //         client: 'Baylor'
-    //       }, ];
-    //       return;
-    //     case 'March':
-    //       $scope.nutritionList = [{
-    //
-    //         first_name: 'Donald March',
-    //         last_name: 'Kondapalli',
-    //         client: 'Facebook'
-    //       }, {
-    //
-    //         first_name: 'THilary march',
-    //         last_name: 'Adi',
-    //         client: 'Wells Fargo'
-    //
-    //       }, {
-    //         first_name: 'Anusha march',
-    //         last_name: 'Lakshmi',
-    //         client: 'Verizon'
-    //       }, {
-    //
-    //         first_name: 'Lekha march',
-    //         last_name: 'Puka',
-    //         client: 'Gaao'
-    //       }, {
-    //
-    //         first_name: 'Ashwini march',
-    //         last_name: 'Moddavada',
-    //         client: 'Ash'
-    //       }, {
-    //
-    //         first_name: 'Harsha march',
-    //         last_name: 'Dickson',
-    //         client: 'BOFA'
-    //       }, {
-    //
-    //         first_name: 'Vinni march',
-    //         last_name: 'Jagar',
-    //         client: 'Jagaur'
-    //       }, {
-    //
-    //         first_name: 'Anusha march',
-    //         last_name: 'Manikonda',
-    //         client: 'Chick'
-    //       }, {
-    //
-    //         first_name: 'Gnandeep march',
-    //         last_name: 'Suriseeti',
-    //         client: 'Dal'
-    //       }, {
-    //
-    //         first_name: 'Nitin march',
-    //         last_name: 'kondapalli',
-    //         client: 'Baylor'
-    //       }, ];
-    //       return;
-    //   }
+      $scope.skillList = reports[month]
     };
   }
 })();

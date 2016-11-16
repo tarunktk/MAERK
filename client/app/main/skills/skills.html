@@ -1,142 +1,90 @@
-<md-input-container layout="row">
-         <label>Year</label>
-         <md-select ng-model="ctrl.year">
-           <md-option><em>None</em></md-option>
-           <md-option ng-repeat="year in ctrl.years" ng-value="year" >
-             {{year}}
-           </md-option>
-         </md-select>
-       </md-input-container>
+<md-input-container layout-gt-xs="row" layout="row">
+  <label>Year</label>
+  <md-select ng-model="ctrl.year">
+    <md-option><em>None</em></md-option>
+    <md-option ng-repeat="year in ctrl.years" ng-value="year">
+      {{year}}
+    </md-option>
+  </md-select>
+</md-input-container>
+
+<md-tabs md-dynamic-height md-border-bottom>
+  <md-tab label="January " ng-click="ctrl.updateMonth('January')">
+
+  </md-tab>
+  <md-tab label="February" ng-click="ctrl.updateMonth('February')">
+
+  </md-tab>
+  <md-tab label="March" ng-click="ctrl.updateMonth('March')">
+
+  </md-tab>
+  <md-tab label="April">
+
+  </md-tab>
+  <md-tab label="May">
+
+  </md-tab>
+  <md-tab label="June">
+
+  </md-tab>
+  <md-tab label="July">
+  </md-tab>
+  <md-tab label="August">
+  </md-tab>
+  <md-tab label="September">
+  </md-tab>
+  <md-tab label="October">
+  </md-tab>
+  <md-tab label="November">
+  </md-tab>
+  <md-tab label="December">
+  </md-tab>
+
+</md-tabs>
 <md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="January ">
 
-      </md-tab>
-      <md-tab label="February">
+  <md-content class="md-padding" layout="column" layout-gt-xs="row">
+    <div flex layout-gt-xs="column">
 
-      </md-tab>
-      <md-tab label="March">
+      <md-card>
 
-      </md-tab>
-      <md-tab label="April">
 
-      </md-tab>
-      <md-tab label="May">
+        <span class="md-headline">Table</span>
+        <mdt-table layout-gt-xs="column" paginated-rows="{ isEnabled: true, rowsPerPageValues: [5,10,20]}" mdt-row="{
+                                  data: skillList,
+                                  'table-row-id-key': '_id',
+                                    'column-keys': [
+                                        'skills',
+                                        'employeeCount',
+                                        'revenue'
 
-      </md-tab>
-      <md-tab label="June">
+                                    ]
+                                  }">
 
-      </md-tab>
-      <md-tab label="July">
-      </md-tab>
-      <md-tab label="August">
-      </md-tab>
-      <md-tab label="September">
-      </md-tab>
-      <md-tab label="October">
-      </md-tab>
-      <md-tab label="November">
-      </md-tab>
-      <md-tab label="December">
-      </md-tab>
+          <mdt-header-row>
+            <mdt-column align-rule="left" column-sort="true">Skills</mdt-column>
+            <mdt-column align-rule="left" column-sort="true">Employee count</mdt-column>
+            <mdt-column align-rule="left" column-sort="true">Revenue</mdt-column>
 
-    </md-tabs>
-  </md-content>
-  <md-content class="md-padding"  layout="column" layout-gt-xs="row" flex>
-      <div flex layout="column">
-        <md-card flex >
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">Table</span>
-              <md-card-content>
-              Skills Table
-              </md-card-content>
-            </md-card-title-text>
-          </md-card-title>
+          </mdt-header-row>
 
-        </md-card>
-      </div>
-      <div flex layout="column">
-        <md-card flex>
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">Chart</span>
 
-              <md-card-content>
-              Skills Chart
-              </md-card-content>
 
-            </md-card-title-text>
-          </md-card-title>
-        </md-card>
-  </div>
-    </md-content>
-<!-- <md-content class="md-padding">
-  <md-input-container>
-           <label>Year</label>
-           <md-select ng-model="ctrl.year">
-             <md-option><em>None</em></md-option>
-             <md-option ng-repeat="year in ctrl.years" ng-value="year" >
-               {{year}}
-             </md-option>
-           </md-select>
-         </md-input-container>
-    <md-nav-bar flex-xs="" flex-gt-xs="50" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+        </mdt-table>
 
-      <md-nav-item md-nav-click="goto('page1')">January</md-nav-item>
-      <md-nav-item md-nav-click="goto('page2')" name="page20">February</md-nav-item>
-      <md-nav-item md-nav-click="goto('page3')" name="page3">March</md-nav-item>
-      <md-nav-item md-nav-click="goto('page4')" name="page4">April</md-nav-item>
-      <md-nav-item md-nav-click="goto('page5')" name="page5">May</md-nav-item>
-      <md-nav-item md-nav-click="goto('page6')" name="page6">June</md-nav-item>
-      <md-nav-item md-nav-click="goto('page7')" name="page7">July</md-nav-item>
-      <md-nav-item md-nav-click="goto('page8')" name="page8">August</md-nav-item>
-      <md-nav-item md-nav-click="goto('page9')" name="page9">September</md-nav-item>
-      <md-nav-item md-nav-click="goto('page10')" name="page10">October</md-nav-item>
-      <md-nav-item md-nav-click="goto('page11')" name="page11">November</md-nav-item>
-      <md-nav-item md-nav-click="goto('page12')" name="page12">December</md-nav-item>
-
-    </md-nav-bar>
-  </md-content>
-  <div flex ui-view></div>
-  <md-content  layout-xs="column" layout="column" layout-align="center center">
-    <div flex-xs="" flex-gt-xs="50" layout="row">
-  <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch="">
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Card with image</span>
-            <span class="md-subhead">Extra Large</span>
-          </md-card-title-text>
-        </md-card-title>
-        <md-card-content layout="row" layout-align="space-between">
-          <div class="md-media-xl card-media"></div>
-          </md-card-title-media>
-        </md-card-title>
       </md-card>
-      <div flex ui-view></div>
-      <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch="">
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Card with image</span>
-            <span class="md-subhead">Extra Large</span>
-          </md-card-title-text>
-        </md-card-title>
-        <md-card-content layout="row" layout-align="space-between">
-          <div class="md-media-xl card-media"></div>
+    </div>
+    <div flex layout="column">
+      <md-card flex>
+
+        <span class="md-headline">Chart</span>
+
+        <md-card-content>
+          Skills Chart
+        </md-card-content>
 
 
-      <div layout="" layout-padding="" layout-align="center" style="height:100px">
-      </div>
+      </md-card>
     </div>
   </md-content>
-
-</div> -->
-
-  <!-- <md-content class="md-padding">
-     <md-tabs md-theme=\"blue\"  md-border-bottom md-autoselect>
-       <md-tab ng-repeat="tab in tabs"
-               ng-disabled="tab.disabled"
-               label="{{tab.title}}">
-       </md-tab>
-     </md-tabs>
-   </md-content>
+</md-content>

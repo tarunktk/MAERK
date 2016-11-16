@@ -1,49 +1,224 @@
-
-(function () {
- 'use strict';
- angular
-     .module('maerkApp')
-     .controller('skillsController', skillsController)
-     // .controller('skillsController', function($scope) {
+(function() {
+  'use strict';
+  angular
+    .module('maerkApp')
+    .controller('skillsController', skillsController)
 
 
-// })();
-     // })
+  function skillsController($scope, $log) {
+    this.year = '';
+    this.years = ['2016', '2015', '2014'];
+    $scope.skillList = [{
 
- function skillsController ($scope, $log) {
-   this.year = '';
-   this.years = ['2016','2015','2014'];
-  //  var tabs = [
-  //        { title: 'January'},
-  //        { title: 'February'},
-  //        { title: 'March'},
-  //        { title: 'April'},
-  //        { title: 'May'},
-  //        { title: 'June'},
-  //        { title: 'July'},
-  //        { title: 'August'},
-  //        { title: 'September'},
-  //        { title: 'October'},
-  //        { title: 'November'},
-  //        { title: 'December'}
-  //      ];
-  //      selected = null,
-  //      previous = null;
-  //  $scope.tabs = tabs;
-  //  $scope.selectedIndex = 2;
-  //  $scope.$watch('selectedIndex', function(current, old){
-  //    previous = selected;
-  //    selected = tabs[current];
-  //    if ( old + 1 && (old != current)) $log.debug('Goodbye ' + previous.title + '!');
-  //    if ( current + 1 )                $log.debug('Hello ' + selected.title + '!');
-  //  });
-  //  $scope.addTab = function (title, view) {
-  //    view = view || title + " Content View";
-  //    tabs.push({ title: title, content: view, disabled: false});
-  //  };
-  //  $scope.removeTab = function (tab) {
-  //    var index = tabs.indexOf(tab);
-  //    tabs.splice(index, 1);
-  //  };
- }
+      skills: 'Tarun',
+      employeeCount: 'Kondapalli',
+      revenue: 'Facebook'
+    }, {
+
+      skills: 'Shrusti',
+      employeeCount: 'Adi',
+      revenue: 'Wells Fargo'
+
+    }, {
+      skills: 'Raju',
+      employeeCount: 'Lakshmi',
+      revenue: 'Verizon'
+    }, {
+
+      skills: 'Lekha',
+      employeeCount: 'Tamvada',
+      revenue: 'Gaao'
+    }, {
+
+      skills: 'Ashwini',
+      employeeCount: 'Vakada',
+      revenue: 'Ash'
+    }, {
+
+      skills: 'Harsha',
+      employeeCount: 'Eruvuru',
+      revenue: 'BOFA'
+    }, {
+
+      skills: 'Vinni',
+      employeeCount: 'Jagar',
+      revenue: 'Jagaur'
+    }, {
+
+      skills: 'Anusha',
+      employeeCount: 'Manikonda',
+      revenue: 'Chick'
+    }, {
+
+      skills: 'Gnandeep',
+      employeeCount: 'Suriseeti',
+      revenue: 'Dal'
+    }, {
+
+      skills: 'Nitin',
+      employeeCount: 'kondapalli',
+      revenue: 'Baylor'
+    } ]
+
+    var reports =
+    {
+      'January':[{
+
+        skills: 'Tarun',
+        employeeCount: 'Kondapalli',
+        revenue: 'Facebook'
+      }, {
+
+        skills: 'Shrusti',
+        employeeCount: 'Adi',
+        revenue: 'Wells Fargo'
+
+      }, {
+        skills: 'Raju',
+        employeeCount: 'Lakshmi',
+        revenue: 'Verizon'
+      }, {
+
+        skills: 'Lekha',
+        employeeCount: 'Tamvada',
+        revenue: 'Gaao'
+      }, {
+
+        skills: 'Ashwini',
+        employeeCount: 'Vakada',
+        revenue: 'Ash'
+      }, {
+
+        skills: 'Harsha',
+        employeeCount: 'Eruvuru',
+        revenue: 'BOFA'
+      }, {
+
+        skills: 'Vinni',
+        employeeCount: 'Jagar',
+        revenue: 'Jagaur'
+      }, {
+
+        skills: 'Anusha',
+        employeeCount: 'Manikonda',
+        revenue: 'Chick'
+      }, {
+
+        skills: 'Gnandeep',
+        employeeCount: 'Suriseeti',
+        revenue: 'Dal'
+      }, {
+
+        skills: 'Nitin',
+        employeeCount: 'kondapalli',
+        revenue: 'Baylor'
+      } ],
+      'February':[{
+
+        skills: 'Donald',
+        employeeCount: 'Trump',
+        revenue: 'WH'
+      }, {
+
+        skills: 'Hilary',
+        employeeCount: 'Clinton',
+        revenue: 'MIA'
+
+      }, {
+        skills: 'Ahwldkh',
+        employeeCount: 'kjsgckjsg',
+        revenue: 'eoihfwef'
+      }, {
+
+        skills: 'ldkhcdl',
+        employeeCount: 'podjcdp',
+        revenue: 'doihd'
+      }, {
+
+        skills: 'Ashwini',
+        employeeCount: 'lchdohcoe',
+        revenue: 'Ash'
+      }, {
+
+        skills: 'choecgoc',
+        employeeCount: 'Dickson',
+        revenue: 'BOFA'
+      }, {
+
+        skills: 'Vinni',
+        employeeCount: 'Jagar',
+        revenue: 'Jagaur'
+      }, {
+
+        skills: 'Anusha',
+        employeeCount: 'Manikonda',
+        revenue: 'adkchdkobc'
+      }, {
+
+        skills: 'Gnandeep',
+        employeeCount: 'Suriseeti',
+        revenue: 'DHL'
+      }, {
+
+        skills: 'Nitin',
+        employeeCount: 'kondapalli',
+        revenue: 'Baylor'
+      }, ],
+      'March':[{
+
+        skills: 'Donaldmarch',
+        employeeCount: 'Trump',
+        revenue: 'WH'
+      }, {
+
+        skills: 'Hilarymarch',
+        employeeCount: 'Clinton',
+        revenue: 'MIA'
+
+      }, {
+        skills: 'Ahwldkhmarch',
+        employeeCount: 'kjsgckjsg',
+        revenue: 'eoihfwef'
+      }, {
+
+        skills: 'ldkhcdl',
+        employeeCount: 'podjcdp',
+        revenue: 'doihd'
+      }, {
+
+        skills: 'Ashwini',
+        employeeCount: 'lchdohcoe',
+        revenue: 'Ash'
+      }, {
+
+        skills: 'choecgoc',
+        employeeCount: 'Dickson',
+        revenue: 'BOFA'
+      }, {
+
+        skills: 'Vinni',
+        employeeCount: 'Jagar',
+        revenue: 'Jagaur'
+      }, {
+
+        skills: 'Anusha',
+        employeeCount: 'Manikonda',
+        revenue: 'adkchdkobc'
+      }, {
+
+        skills: 'Gnandeep',
+        employeeCount: 'Suriseeti',
+        revenue: 'DHL'
+      }, {
+
+        skills: 'Nitin',
+        employeeCount: 'kondapalli',
+        revenue: 'Baylor'
+      }, ]
+
+    }
+    this.updateMonth = function(month) {
+      $scope.skillList = reports[month]
+    };
+  }
 })();

@@ -41,17 +41,15 @@
   </md-tab>
 
 </md-tabs>
-<md-content>
-
-  <md-content class="md-padding" layout="column" layout-gt-xs="row">
-    <div flex layout-gt-xs="column">
-
-      <md-card>
 
 
-        <span class="md-headline">Table</span>
-        <mdt-table layout-gt-xs="column" paginated-rows="{ isEnabled: true, rowsPerPageValues: [5,10,20]}" mdt-row="{
-                                  data: skillList,
+<md-content class="md-padding" layout="column" layout-gt-xs="row">
+
+    <md-content flex layout="column">
+
+      <md-toolbar layout-align="center center" class="md-headline">Table</md-toolbar>
+      <mdt-table layout-gt-xs="column" paginated-rows="{ isEnabled: true, rowsPerPageValues: [5,10,20]}" mdt-row="{
+                                  data: ctrl.skillList,
                                   'table-row-id-key': '_id',
                                     'column-keys': [
                                         'skills',
@@ -61,30 +59,27 @@
                                     ]
                                   }">
 
-          <mdt-header-row>
-            <mdt-column align-rule="left" column-sort="true">Skills</mdt-column>
-            <mdt-column align-rule="left" column-sort="true">Employee count</mdt-column>
-            <mdt-column align-rule="left" column-sort="true">Revenue</mdt-column>
+        <mdt-header-row>
+          <mdt-column align-rule="left" column-sort="true">Skills</mdt-column>
+          <mdt-column align-rule="left" column-sort="true">Employee count</mdt-column>
+          <mdt-column align-rule="left" column-sort="true">Revenue</mdt-column>
 
-          </mdt-header-row>
+        </mdt-header-row>
 
+      </mdt-table>
+      <md-divider></md-divider>
+    </md-content>
+<md-divider></md-divider>
+    <md-content flex >
+      <md-toolbar layout-align="center center"class="md-headline">Chart</md-toolbar>
+      <div layout="row" layout-align="center" flex>
+        <canvas flex="60"  layout-align="center" layout-padding id="pie" legend="true" class="chart chart-pie" chart-data="ctrl.data" chart-labels="ctrl.labels" chart-options="ctrl.options">
+          </canvas>
+          <!-- <div ng-repeat = "ski in skillList" >
+        {{skillList[2].skills}}
+          </div> -->
+      </div>
+      <md-divider></md-divider>
+    </md-content>
 
-
-        </mdt-table>
-
-      </md-card>
-    </div>
-    <div flex layout="column">
-      <md-card flex>
-
-        <span class="md-headline">Chart</span>
-
-        <md-card-content>
-          Skills Chart
-        </md-card-content>
-
-
-      </md-card>
-    </div>
-  </md-content>
 </md-content>

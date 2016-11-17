@@ -5,220 +5,236 @@
     .controller('skillsController', skillsController)
 
 
-  function skillsController($scope, $log) {
+  function skillsController($log) {
     this.year = '';
     this.years = ['2016', '2015', '2014'];
-    $scope.skillList = [{
+    // this.skillList = [{
+    //
+    //   skills: 'Dev',
+    //   employeeCount: 10,
+    //   revenue: 23
+    // }, {
+    //
+    //   skills: 'Graphic',
+    //   employeeCount: 20,
+    //   revenue: 23
+    //
+    // }, {
+    //   skills: 'Angular',
+    //   employeeCount: 30,
+    //   revenue: 987
+    // }, {
+    //
+    //   skills: 'Jquery',
+    //   employeeCount: 23,
+    //   revenue: 765
+    // }, {
+    //
+    //   skills: 'Javascript',
+    //   employeeCount: 896,
+    //   revenue: 78
+    // }, {
+    //
+    //   skills: 'HTML',
+    //   employeeCount: 7,
+    //   revenue: 876
+    // }, {
+    //
+    //   skills: 'CSS',
+    //   employeeCount: 875,
+    //   revenue: 98
+    // }, {
+    //
+    //   skills: 'DotNet',
+    //   employeeCount: 765,
+    //   revenue: 199
+    // }, {
+    //
+    //   skills: 'Hadoop',
+    //   employeeCount: 76,
+    //   revenue: 847
+    // }, {
+    //
+    //   skills: 'Java',
+    //   employeeCount: 876,
+    //   revenue: 56
+    // }]
 
-      skills: 'Tarun',
-      employeeCount: 'Kondapalli',
-      revenue: 'Facebook'
-    }, {
+    var reports = {
+      'January': [{
 
-      skills: 'Shrusti',
-      employeeCount: 'Adi',
-      revenue: 'Wells Fargo'
-
-    }, {
-      skills: 'Raju',
-      employeeCount: 'Lakshmi',
-      revenue: 'Verizon'
-    }, {
-
-      skills: 'Lekha',
-      employeeCount: 'Tamvada',
-      revenue: 'Gaao'
-    }, {
-
-      skills: 'Ashwini',
-      employeeCount: 'Vakada',
-      revenue: 'Ash'
-    }, {
-
-      skills: 'Harsha',
-      employeeCount: 'Eruvuru',
-      revenue: 'BOFA'
-    }, {
-
-      skills: 'Vinni',
-      employeeCount: 'Jagar',
-      revenue: 'Jagaur'
-    }, {
-
-      skills: 'Anusha',
-      employeeCount: 'Manikonda',
-      revenue: 'Chick'
-    }, {
-
-      skills: 'Gnandeep',
-      employeeCount: 'Suriseeti',
-      revenue: 'Dal'
-    }, {
-
-      skills: 'Nitin',
-      employeeCount: 'kondapalli',
-      revenue: 'Baylor'
-    } ]
-
-    var reports =
-    {
-      'January':[{
-
-        skills: 'Tarun',
-        employeeCount: 'Kondapalli',
-        revenue: 'Facebook'
+        skills: 'Dev',
+        employeeCount: 10,
+        revenue: 23
       }, {
 
-        skills: 'Shrusti',
-        employeeCount: 'Adi',
-        revenue: 'Wells Fargo'
+        skills: 'Graphic',
+        employeeCount: 20,
+        revenue: 23
 
       }, {
-        skills: 'Raju',
-        employeeCount: 'Lakshmi',
-        revenue: 'Verizon'
+        skills: 'Angular',
+        employeeCount: 30,
+        revenue: 987
       }, {
 
-        skills: 'Lekha',
-        employeeCount: 'Tamvada',
-        revenue: 'Gaao'
+        skills: 'Jquery',
+        employeeCount: 23,
+        revenue: 765
       }, {
 
-        skills: 'Ashwini',
-        employeeCount: 'Vakada',
-        revenue: 'Ash'
+        skills: 'Javascript',
+        employeeCount: 896,
+        revenue: 78
       }, {
 
-        skills: 'Harsha',
-        employeeCount: 'Eruvuru',
-        revenue: 'BOFA'
+        skills: 'HTML',
+        employeeCount: 7,
+        revenue: 876
       }, {
 
-        skills: 'Vinni',
-        employeeCount: 'Jagar',
-        revenue: 'Jagaur'
+        skills: 'CSS',
+        employeeCount: 875,
+        revenue: 98
       }, {
 
-        skills: 'Anusha',
-        employeeCount: 'Manikonda',
-        revenue: 'Chick'
+        skills: 'DotNet',
+        employeeCount: 765,
+        revenue: 199
       }, {
 
-        skills: 'Gnandeep',
-        employeeCount: 'Suriseeti',
-        revenue: 'Dal'
+        skills: 'Hadoop',
+        employeeCount: 76,
+        revenue: 847
       }, {
 
-        skills: 'Nitin',
-        employeeCount: 'kondapalli',
-        revenue: 'Baylor'
-      } ],
-      'February':[{
+        skills: 'Java',
+        employeeCount: 876,
+        revenue: 56
+      }],
+      'February': [{
 
-        skills: 'Donald',
-        employeeCount: 'Trump',
-        revenue: 'WH'
+        skills: 'Dev',
+        employeeCount: 897,
+        revenue: 85
       }, {
 
-        skills: 'Hilary',
-        employeeCount: 'Clinton',
-        revenue: 'MIA'
+        skills: 'Graphic',
+        employeeCount: 876,
+        revenue: 675
 
       }, {
-        skills: 'Ahwldkh',
-        employeeCount: 'kjsgckjsg',
-        revenue: 'eoihfwef'
+        skills: 'Angular',
+        employeeCount: 98,
+        revenue: 756
       }, {
 
-        skills: 'ldkhcdl',
-        employeeCount: 'podjcdp',
-        revenue: 'doihd'
+        skills: 'Jquery',
+        employeeCount: 543,
+        revenue: 765
       }, {
 
-        skills: 'Ashwini',
-        employeeCount: 'lchdohcoe',
-        revenue: 'Ash'
+        skills: 'Javascript',
+        employeeCount: 76,
+        revenue: 765
       }, {
 
-        skills: 'choecgoc',
-        employeeCount: 'Dickson',
-        revenue: 'BOFA'
+        skills: 'HTML',
+        employeeCount: 543,
+        revenue: 75
       }, {
 
-        skills: 'Vinni',
-        employeeCount: 'Jagar',
-        revenue: 'Jagaur'
+        skills: 'CSS',
+        employeeCount: 6745,
+        revenue: 453
       }, {
 
-        skills: 'Anusha',
-        employeeCount: 'Manikonda',
-        revenue: 'adkchdkobc'
+        skills: 'DotNet',
+        employeeCount: 654,
+        revenue: 654
       }, {
 
-        skills: 'Gnandeep',
-        employeeCount: 'Suriseeti',
-        revenue: 'DHL'
+        skills: 'Hadoop',
+        employeeCount: 564,
+        revenue: 765
       }, {
 
-        skills: 'Nitin',
-        employeeCount: 'kondapalli',
-        revenue: 'Baylor'
-      }, ],
-      'March':[{
+        skills: 'Java',
+        employeeCount: 786,
+        revenue: 765
+      }],
+      'March': [{
 
-        skills: 'Donaldmarch',
-        employeeCount: 'Trump',
-        revenue: 'WH'
+        skills: 'Dev',
+        employeeCount: 987,
+        revenue: 765
       }, {
 
-        skills: 'Hilarymarch',
-        employeeCount: 'Clinton',
-        revenue: 'MIA'
+        skills: 'Graphic',
+        employeeCount: 986,
+        revenue: 765
 
       }, {
-        skills: 'Ahwldkhmarch',
-        employeeCount: 'kjsgckjsg',
-        revenue: 'eoihfwef'
+        skills: 'Angular',
+        employeeCount: 986,
+        revenue: 765
       }, {
 
-        skills: 'ldkhcdl',
-        employeeCount: 'podjcdp',
-        revenue: 'doihd'
+        skills: 'Jquery',
+        employeeCount: 786,
+        revenue: 764
       }, {
 
-        skills: 'Ashwini',
-        employeeCount: 'lchdohcoe',
-        revenue: 'Ash'
+        skills: 'Javascript',
+        employeeCount: 876,
+        revenue: 654
       }, {
 
-        skills: 'choecgoc',
-        employeeCount: 'Dickson',
-        revenue: 'BOFA'
+        skills: 'HTML',
+        employeeCount: 87,
+        revenue: 53
       }, {
 
-        skills: 'Vinni',
-        employeeCount: 'Jagar',
-        revenue: 'Jagaur'
+        skills: 'CSS',
+        employeeCount: 876,
+        revenue: 8
       }, {
 
-        skills: 'Anusha',
-        employeeCount: 'Manikonda',
-        revenue: 'adkchdkobc'
+        skills: 'DotNet',
+        employeeCount: 6754,
+        revenue: 64
       }, {
 
-        skills: 'Gnandeep',
-        employeeCount: 'Suriseeti',
-        revenue: 'DHL'
+        skills: 'Hadoop',
+        employeeCount: 4,
+        revenue: 64
       }, {
 
-        skills: 'Nitin',
-        employeeCount: 'kondapalli',
-        revenue: 'Baylor'
+        skills: 'Java',
+        employeeCount: 765,
+        revenue: 765
       }, ]
 
     }
+
     this.updateMonth = function(month) {
-      $scope.skillList = reports[month]
+      this.skillList = reports[month];
+      this.data = [];
+      this.labels = [];
+      //for loop this.skillList
+
+      for (var i = 0; i < this.skillList.length; i++) {
+        console.log("tarun")
+        // console.log(this.data)
+      //  if (this.labels[i] == this.skillList.skills) {
+      this.data.push( this.skillList[i].revenue);
+      this.labels.push( this.skillList[i].skills);
+        console.log(this.data)
+        }
+
+    //  }
     };
+    this.updateMonth("January");
+
   }
 })();

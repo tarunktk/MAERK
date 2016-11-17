@@ -5,60 +5,60 @@
     .controller('skillsController', skillsController)
 
 
-  function skillsController($scope, $log) {
+  function skillsController($log) {
     this.year = '';
     this.years = ['2016', '2015', '2014'];
-    $scope.skillList = [{
-
-      skills: 'Dev',
-      employeeCount: 10,
-      revenue: 23
-    }, {
-
-      skills: 'Graphic',
-      employeeCount: 20,
-      revenue: 23
-
-    }, {
-      skills: 'Angular',
-      employeeCount: 30,
-      revenue: 987
-    }, {
-
-      skills: 'Jquery',
-      employeeCount: 23,
-      revenue: 765
-    }, {
-
-      skills: 'Javascript',
-      employeeCount: 896,
-      revenue: 78
-    }, {
-
-      skills: 'HTML',
-      employeeCount: 7,
-      revenue: 876
-    }, {
-
-      skills: 'CSS',
-      employeeCount: 875,
-      revenue: 98
-    }, {
-
-      skills: 'DotNet',
-      employeeCount: 765,
-      revenue: 199
-    }, {
-
-      skills: 'Hadoop',
-      employeeCount: 76,
-      revenue: 847
-    }, {
-
-      skills: 'Java',
-      employeeCount: 876,
-      revenue: 56
-    }]
+    // this.skillList = [{
+    //
+    //   skills: 'Dev',
+    //   employeeCount: 10,
+    //   revenue: 23
+    // }, {
+    //
+    //   skills: 'Graphic',
+    //   employeeCount: 20,
+    //   revenue: 23
+    //
+    // }, {
+    //   skills: 'Angular',
+    //   employeeCount: 30,
+    //   revenue: 987
+    // }, {
+    //
+    //   skills: 'Jquery',
+    //   employeeCount: 23,
+    //   revenue: 765
+    // }, {
+    //
+    //   skills: 'Javascript',
+    //   employeeCount: 896,
+    //   revenue: 78
+    // }, {
+    //
+    //   skills: 'HTML',
+    //   employeeCount: 7,
+    //   revenue: 876
+    // }, {
+    //
+    //   skills: 'CSS',
+    //   employeeCount: 875,
+    //   revenue: 98
+    // }, {
+    //
+    //   skills: 'DotNet',
+    //   employeeCount: 765,
+    //   revenue: 199
+    // }, {
+    //
+    //   skills: 'Hadoop',
+    //   employeeCount: 76,
+    //   revenue: 847
+    // }, {
+    //
+    //   skills: 'Java',
+    //   employeeCount: 876,
+    //   revenue: 56
+    // }]
 
     var reports = {
       'January': [{
@@ -218,23 +218,23 @@
     }
 
     this.updateMonth = function(month) {
-      $scope.skillList = reports[month];
-      $scope.data = [];
-      $scope.labels = [];
-      //for loop $scope.skillList
+      this.skillList = reports[month];
+      this.data = [];
+      this.labels = [];
+      //for loop this.skillList
 
-      for (var i = 0; i < $scope.skillList.length; i++) {
+      for (var i = 0; i < this.skillList.length; i++) {
         console.log("tarun")
-        // console.log($scope.data)
-      //  if ($scope.labels[i] == $scope.skillList.skills) {
-      $scope.data.push( $scope.skillList[i].revenue);
-      $scope.labels.push( $scope.skillList[i].skills);
-        console.log($scope.data)
+        // console.log(this.data)
+      //  if (this.labels[i] == this.skillList.skills) {
+      this.data.push( this.skillList[i].revenue);
+      this.labels.push( this.skillList[i].skills);
+        console.log(this.data)
         }
+
     //  }
     };
+    this.updateMonth("January");
 
-    $scope.labels = ["Dev", "Graphic", "Angualar", "Jquery", "Javascript", "HTML", "CSS", "DotNet", "Hadoop", "Java"];
-    $scope.data = [300, 500, 100, 300, 500, 100, 300, 500, 100, 100];
   }
 })();

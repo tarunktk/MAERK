@@ -2,7 +2,7 @@
 
 import mongoose from 'mongoose';
 
-var employeeSchema = new mongoose.Schema({
+var EmployeeSchema = new mongoose.Schema({
 
     first_name: {
     type : String,
@@ -81,4 +81,4 @@ var employeeSchema = new mongoose.Schema({
 
 });
 
-export default mongoose.model('employee', employeeSchema);
+export default mongoose.model('employee', EmployeeSchema);

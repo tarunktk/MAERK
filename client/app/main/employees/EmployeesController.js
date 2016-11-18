@@ -22,23 +22,26 @@
         } else {
           $scope.showEditButton = false;
           $scope.showDeleteButton = true;
-          $scope.showActivateButton = false;
+          $scope.showActivateButton = true;
           $scope.selected = rows;
         }
       }
 
 
-      // $scope.saveRowCallback = function(row) {
-      //   $mdToast.show(
-      //     $mdToast.simple()
-      //     .content('Row changed to: ' + row)
-      //     .hideDelay(3000)
-      //   );
-      // };
+      $scope.saveRowCallback = function(row) {
+        $mdToast.show(
+          $mdToast.simple()
+          .content('Row changed to: ' + row)
+          .hideDelay(3000)
+        );
+      }
+
       $scope.employeeList = Employee.getAll;
       $scope.status = '';
+
       $scope.showAdvanced = function(ev) {
         $mdDialog.show({
+
           controller: 'AddCtrl',
           controllerAs: 'project',
           templateUrl: 'app/main/employees/addEmployee/addEmployee.html',
@@ -50,6 +53,23 @@
           clickOutsideToClose: true,
           fullscreen: $scope.customFullscreen
         })
+      }
+
+      $scope.showDelete = function(ev) {
+        var confirm = $mdDialog.confirm()
+          .title('You sure to get rid of this SOB(s)??')
+          .targetEvent(ev)
+          .ok('FINISH HIM/THEM!')
+          .cancel('Nah! Just kidding');
+        $mdDialog.show(confirm).then(function() {
+          $scope.employeeList = $scope.employeeList.filter(function(employee) {
+            return $scope.selected.indexOf(employee._id) < 0;
+          });
+          console.log($scope.employeeList);
+          $scope.status = 'You decided to get rid of your debt.';
+        }, function() {
+          $scope.status = 'You decided to keep your debt.';
+        });
       }
 
       $scope.showEdit = function(ev) {
@@ -72,11 +92,7 @@
             targetEvent: ev,
             clickOutsideToClose: true,
             fullscreen: $scope.customFullscreen
-              // resolve: {
-              //   data: function() {
-              //     return selected;
-              //   }
-              // }
+
           })
           .then(function(answer) {
 
@@ -84,37 +100,64 @@
           }, function() {
             $scope.status = 'You cancelled the dialog.';
           })
-      };
-
-      // DELETE FUNCTIONALITY
-      $scope.showDelete = function(ev) {
+      }
+      $scope.showConfirm = function(ev) {
         var confirm = $mdDialog.confirm()
-          .title('You sure to get rid of this SOB(s)??')
+          .title('Are you sure you want to Deactivate the employee?')
+          .textContent('')
+          .ariaLabel('Lucky day')
           .targetEvent(ev)
-          .ok('FINISH HIM/THEM!')
-          .cancel('Nah! Just kidding');
+          .ok('Yes!')
+          .cancel('Cancel');
         $mdDialog.show(confirm).then(function() {
-          $scope.employeeList = $scope.employeeList.filter(function(employee) {
-            return $scope.selected.indexOf(employee._id) < 0;
-          });
-          console.log($scope.employeeList)
-      })
-      };
-
-      $scope.showActivate = function(ev) {
-
-        var confirm = $mdDialog.confirm()
-          .title('Activate/Deactivate an employee(s)')
-          .targetEvent(ev)
-          .ok('Yeah sure!!')
-          .cancel('No thanks!!');
-
-        $mdDialog.show(confirm).then(function() {
-          $scope.status = 'You decided to get rid of your debt.';
+          $scope.deactivate()
+          $scope.status = 'You decided to activate the employee.';
         }, function() {
-          $scope.status = 'You decided to keep your debt.';
-        });
-      };
+          $scope.status = 'You decided to keep the employee.';
+        })
+      }
 
+      $scope.showConfirmAct = function(ev) {
+        // Appending dialog to document.body to cover sidenav in docs app
+        var confirm = $mdDialog.confirm()
+          .title('Are you sure you want to Activate the employee?')
+          .textContent('')
+          .ariaLabel('Lucky day')
+          .targetEvent(ev)
+          .ok('Yes!')
+          .cancel('Cancel');
+
+
+        $mdDialog.show(confirm).then(function() {
+          $scope.activate()
+          $scope.status = 'You decided to deactivate the employee.';
+        }, function() {
+          $scope.status = 'You decided to cancel.';
+        })
+      }
+
+      $scope.activate = function() {
+        for (var i = 0; i < $scope.selected.length; i++) {
+          for (var j = 0; j < $scope.employeeList.length; j++) {
+            if ($scope.selected[i] == $scope.employeeList[j]._id) {
+              $scope.employeeList[j].activate = true;
+              Employee.updateEmp($scope.employeeList[j]);
+              console.log("hi")
+            }
+          }
+        }
+      }
+
+      $scope.deactivate = function() {
+        for (var i = 0; i < $scope.selected.length; i++) {
+          for (var j = 0; j < $scope.employeeList.length; j++) {
+            if ($scope.selected[i] == $scope.employeeList[j]._id) {
+              $scope.employeeList[j].activate = false;
+              Employee.updateEmp($scope.employeeList[j]);
+              console.log("hehhehehehe")
+            }
+          }
+        }
+      }
     })
 })();

@@ -29,7 +29,7 @@
        })
      },
 
-     updateEmp : function(data){
+   updateEmp : function(data){
      empResource.update({_id:data._id},data).$promise.then(function(editEmp) {
        for( var i = 0; i < employees.length; i++){
          if(employees[i]._id == editEmp._id){

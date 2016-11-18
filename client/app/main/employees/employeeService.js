@@ -31,11 +31,11 @@
 
    updateEmp : function(data){
      empResource.update({_id:data._id},data).$promise.then(function(editEmp) {
-       for( var i = 0;  i < employees.length; i++){
-       if (employees[i]._i == editEmp._id){
-         employees[i] = editEmp;
+       for( var i = 0; i < employees.length; i++){
+         if(employees[i]._id == editEmp._id){
+           employees[i] = editEmp;
+         }
        }
-     }
      });
    }
  }
@@ -45,11 +45,3 @@
   angular.module('maerkApp')
     .factory('Employee', EmployeeResource);
 })();
-var updateEmp = function(data) {
-      console.log(data);
-      EmpResource.update({_id:data._id},data).$promise.then(function(editEmp) {
-
-        employees.push(editEmp);
-        console.log(editEmp);
-      });
-    }

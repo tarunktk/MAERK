@@ -23,6 +23,13 @@ angular.module('maerkApp')
       controllerAs:'ctrl',
       authenticate:true
     })
+    .state("main.client",{
+      url:"/client",
+      templateUrl:"app/main/client/client.html",
+      controller:'clientController',
+      controllerAs:'ctrl',
+      authenticate:true
+    })
     .state("main.add",{
       url:"/addEmployee",
       templateUrl:"app/main/employees/addEmployee/addEmployee.html",

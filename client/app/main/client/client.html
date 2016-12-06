@@ -1,43 +1,43 @@
 <md-input-container layout-gt-xs="row" layout="row">
   <label>Year</label>
-  <md-select ng-model="ctrl.year">
+  <md-select ng-model="cc.year">
     <md-option><em>None</em></md-option>
-    <md-option ng-repeat="year in ctrl.years" ng-value="year">
+    <md-option ng-repeat="year in cc.years" ng-value="year">
       {{year}}
     </md-option>
   </md-select>
 </md-input-container>
 
 <md-tabs md-dynamic-height md-border-bottom>
-  <md-tab label="January " ng-click="ctrl.updateMonth('January')">
+  <md-tab label="January " ng-click="cc.updateMonth('January')">
 
   </md-tab>
-  <md-tab label="February" ng-click="ctrl.updateMonth('February')">
+  <md-tab label="February" ng-click="cc.updateMonth('February')">
 
   </md-tab>
-  <md-tab label="March" ng-click="ctrl.updateMonth('March')">
+  <md-tab label="March" ng-click="cc.updateMonth('March')">
 
   </md-tab>
-  <md-tab label="April" ng-click="ctrl.updateMonth('April')">
+  <md-tab label="April" ng-click="cc.updateMonth('April')">
 
   </md-tab>
-  <md-tab label="May" ng-click="ctrl.updateMonth('May')">
+  <md-tab label="May" ng-click="cc.updateMonth('May')">
 
   </md-tab>
-  <md-tab label="June" ng-click="ctrl.updateMonth('June')">
+  <md-tab label="June" ng-click="cc.updateMonth('June')">
 
   </md-tab>
-  <md-tab label="July" ng-click="ctrl.updateMonth('July')">
+  <md-tab label="July" ng-click="cc.updateMonth('July')">
   </md-tab>
-  <md-tab label="August" ng-click="ctrl.updateMonth('August')">
+  <md-tab label="August" ng-click="cc.updateMonth('August')">
   </md-tab>
-  <md-tab label="September" ng-click="ctrl.updateMonth('September')">
+  <md-tab label="September" ng-click="cc.updateMonth('September')">
   </md-tab>
-  <md-tab label="October" ng-click="ctrl.updateMonth('October')">
+  <md-tab label="October" ng-click="cc.updateMonth('October')">
   </md-tab>
-  <md-tab label="November" ng-click="ctrl.updateMonth('November')">
+  <md-tab label="November" ng-click="cc.updateMonth('November')">
   </md-tab>
-  <md-tab label="December" ng-click="ctrl.updateMonth('December')">
+  <md-tab label="December" ng-click="cc.updateMonth('December')">
   </md-tab>
 
 </md-tabs>
@@ -49,10 +49,10 @@
 
       <md-toolbar layout-align="center center" class="md-headline">Table</md-toolbar>
       <mdt-table layout-gt-xs="column" paginated-rows="{ isEnabled: true, rowsPerPageValues: [5,10,20]}" mdt-row="{
-                                  data: ctrl.skillList,
+                                  data: cc.clientList,
                                   'table-row-id-key': '_id',
                                     'column-keys': [
-                                        'skills',
+                                        'client',
                                         'employeeCount',
                                         'revenue'
 
@@ -60,7 +60,7 @@
                                   }">
 
         <mdt-header-row>
-          <mdt-column align-rule="left" column-sort="true">Skills</mdt-column>
+          <mdt-column align-rule="left" column-sort="true">client</mdt-column>
           <mdt-column align-rule="left" column-sort="true">Employee count</mdt-column>
           <mdt-column align-rule="left" column-sort="true">Revenue</mdt-column>
 
@@ -71,12 +71,12 @@
     </md-content>
 <md-divider></md-divider>
     <md-content flex >
-      <md-toolbar layout-align="center center"class="md-headline">Chart</md-toolbar>
+      <md-toolbar layout-align="center center"class="md-headline">  Chart</md-toolbar>
       <div layout="row" layout-align="center" flex>
-        <canvas flex="60"  layout-align="center" layout-padding id="pie" legend="true" class="chart chart-pie" chart-data="ctrl.data" chart-labels="ctrl.labels" chart-options="ctrl.options">
+        <canvas flex="60"  layout-align="center" layout-padding id="pie" legend="true" class="chart chart-pie" chart-data="cc.data" chart-labels="cc.labels" chart-options="cc.options">
           </canvas>
           <!-- <div ng-repeat = "ski in skillList" >
-        {{skillList[2].skills}}
+        {{skillList[2].client}}
           </div> -->
       </div>
       <md-divider></md-divider>
